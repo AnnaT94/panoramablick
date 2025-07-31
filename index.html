@@ -47,7 +47,7 @@
         table {
             width: 100%;
             border-collapse: collapse;
-            margin: 1rem 0;
+            margin: 1rem auto;
         }
         th, td {
             border: 1px solid #e5e7eb;
@@ -63,19 +63,38 @@
             right: 20px;
             z-index: 1000;
         }
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 0.5rem;
+            margin-bottom: 1rem;
+            border: 1px solid #e5e7eb;
+            border-radius: 0.375rem;
+        }
+        .contact-form button {
+            background-color: #3b82f6;
+            color: white;
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 0.375rem;
+            cursor: pointer;
+        }
+        .contact-form button:hover {
+            background-color: #2563eb;
+        }
     </style>
 </head>
 <body class="bg-gray-100 font-sans">
     <!-- Navigation -->
     <nav class="bg-white shadow-md sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16">
+            <div class="flex justify-between h-24 items-center">
                 <div class="flex items-center">
-                    <!-- Logo Description for Designer: A minimalist logo featuring a stylized mountain silhouette with a rising sun or moon behind it, reflecting the panoramic views of Melchsee-Frutt. The text "Panoramablick Melchsee-Frutt" in a clean, modern sans-serif font (e.g., Montserrat) in dark gray or navy blue, with a subtle accent color (e.g., soft orange or teal) for the sun/moon. Replace this placeholder with the actual logo image: -->
-                    <img src="https://www.lav.ch/application/files/2617/5388/6074/Screenshot_2025-07-30_at_08-35-41_Free_Logo_Maker_-_Get_Custom_Logo_Designs_in_Minutes_Looka.png" alt="Panoramablick Melchsee-Frutt Logo" class="h-12">
+                    <img src="https://www.lav.ch/application/files/2617/5388/6074/Screenshot_2025-07-30_at_08-35-41_Free_Logo_Maker_-_Get_Custom_Logo_Designs_in_Minutes_Looka.png" alt="Panoramablick Melchsee-Frutt Logo" class="h-32">
                 </div>
-                <div class="flex items-center space-x-4">
+                <div class="flex items-center space-x-6">
                     <a href="#wohnung" class="text-gray-600 hover:text-gray-900">Wohnung</a>
+                    <a href="#prices" class="text-gray-600 hover:text-gray-900">Preise</a>
                     <a href="#kontakt" class="text-gray-600 hover:text-gray-900">Kontakt</a>
                     <div class="flex space-x-2">
                         <a href="#" class="text-gray-600 hover:text-gray-900">DE</a>
@@ -88,7 +107,7 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="bg-cover bg-center h-screen relative" style="background-image: url('https://www.lav.ch/application/files/9817/5388/6033/Unbenannt.jpg');">
+    <section class="bg-cover bg-center h-screen relative" style="background-image: url('https://tb-photo.ch/media/images/Art-Galerie/Melchsee-Frutt/_2560xAUTO_crop_center-center_85_none/629489/Melchsee-Frutt_Nacht-2.jpeg');">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center justify-center flex-col">
             <img src="https://www.lav.ch/application/files/2617/5388/6074/Screenshot_2025-07-30_at_08-35-41_Free_Logo_Maker_-_Get_Custom_Logo_Designs_in_Minutes_Looka.png" alt="Panoramablick Melchsee-Frutt Logo" class="h-24 mb-4">
         </div>
@@ -97,27 +116,27 @@
     <!-- Wohnung Section -->
     <section id="wohnung" class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Entdecken Sie Ihre Ferienwohnung</h2>
+            <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Willkommen in meiner Ferienwohnung!</h2>
             <p class="text-lg text-gray-600 mb-8 text-center">
-                Die Ferienwohnung Panoramablick ist eine geräumige 3,5-Zimmerwohnung, die modernen Komfort mit alpiner Gemütlichkeit vereint. Sie verfügt über zwei Schlafzimmer, jedes mit einem bequemen Doppelbett, sowie einen großzügigen Wohn- und Essbereich, der zusätzlich zwei Schlafsofas bietet. Die Wohnung ist mit einer voll ausgestatteten Küche, einer Dusche, einer Waschmaschine und einem Trockner ausgestattet. Ein separater Skiraum mit Ski-Spind im Erdgeschoss sowie ein Balkon mit freiem Blick auf den Melchsee und die beeindruckende Berglandschaft runden das Angebot ab. Dies macht sie zum perfekten Ausgangspunkt für Ihren Urlaub.
+                Die Ferienwohnung Panoramablick ist eine geräumige 3,5-Zimmerwohnung, die modernen Komfort mit alpiner Gemütlichkeit vereint. Sie verfügt über zwei Schlafzimmer, jedes mit einem bequemen Doppelbett, sowie einen großzügigen Wohn- und Essbereich, der zusätzlich zwei Schlafsofas bietet. Die Wohnung ist mit einer voll ausgestatteten Küche, einer Dusche, einer Waschmaschine und einem Trockner ausgestattet. Ein separater Skiraum mit Ski-Spind im Erdgeschoss sowie ein Balkon mit freiem Blick auf den Melchsee und die beeindruckende Berglandschaft runden das Angebot ab. Dies macht sie zum perfekten Ausgangspunkt für deine Winter- und Skiferien.
             </p>
-            <div class="flex justify-center mb-8">
-                <a href="https://airbnb.ch/h/exklusive-wohnung-melchsee-frutt" target="_blank" class="bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 fixed-book-button" id="book-button">Wohnung buchen</a>
-            </div>
             <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-8">
                 <img src="https://a0.muscache.com/im/pictures/miso/Hosting-46182771/original/f33c99bd-3f3e-4e17-95c3-657565bb7014.jpeg?im_w=720" alt="Wohnung Panoramablick" class="rounded-lg shadow-md">
                 <img src="https://a0.muscache.com/im/pictures/miso/Hosting-46182771/original/d3294b18-860e-4a3b-ac89-593697d2a142.jpeg?im_w=720" alt="Ausblick Melchsee-Frutt" class="rounded-lg shadow-md">
             </div>
+            <p class="text-lg text-gray-600 mt-8 text-center">
+                Hier findest du alles, was du für einen unvergesslichen Aufenthalt brauchst – von gemütlichen Abenden bis zu spannenden Tagen auf der Piste!
+            </p>
             <div class="text-center mt-8">
-                <a href="#hausregeln" class="bg-gray-800 text-white px-6 py-3 rounded-full hover:bg-gray-700" id="hausregeln-btn" onclick="document.getElementById('hausregeln-section').classList.toggle('hidden');">Hausregeln</a>
+                <a href="#hausregeln" class="bg-gray-800 text-white px-6 py-3 rounded-full hover:bg-gray-700" id="hausregeln-btn" onclick="document.getElementById('hausregeln-section').scrollIntoView({ behavior: 'smooth' });">Hausregeln</a>
             </div>
         </div>
     </section>
 
     <!-- Preisliste Section -->
     <section id="prices" class="py-16 bg-gray-100">
-        <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Preise Wintersaison 2025/2026</h2>
-        <p class="text-lg text-gray-600 mb-8 text-center">Unsere Preise beinhalten Endreinigung (CHF 350), Bettwäsche/Frottee (CHF 40/Person), WLAN, Heizung, Ski-Spind und Mehrwertsteuer.</p>
+        <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Preise Wintersaison 2025/26</h2>
+        <p class="text-lg text-gray-600 mb-8 text-center">Unsere Preise sind exklusive Reinigung und Bettwäsche/Frottee. Die Endreinigung von CHF 350 sowie CHF 40 pro Person für Bettwäsche und Frottee kommen zusätzlich zu den Preisen hinzu.</p>
         <table>
             <tr>
                 <th>Zeitraum</th>
@@ -128,52 +147,51 @@
             <tr>
                 <td>13.12. – 20.12.2025</td>
                 <td>Nebensaison</td>
-                <td>CHF 3’500.–</td>
+                <td>CHF 3'000.–</td>
                 <td>4 Nächte</td>
             </tr>
             <tr>
                 <td>20.12. – 04.01.2026 🎄</td>
                 <td>Hochsaison</td>
-                <td>CHF 4’500.–</td>
+                <td>CHF 4'000.–</td>
                 <td>7 Nächte</td>
             </tr>
             <tr>
                 <td>04.01. – 31.01.2026</td>
                 <td>Nebensaison</td>
-                <td>CHF 3’500.–</td>
+                <td>CHF 3'000.–</td>
                 <td>4 Nächte</td>
             </tr>
             <tr>
                 <td>01.02. – 08.03.2026 🏂</td>
                 <td>Hochsaison</td>
-                <td>CHF 4’200.–</td>
+                <td>CHF 4'000.–</td>
                 <td>7 Nächte</td>
             </tr>
             <tr>
                 <td>09.03. – 03.04.2026</td>
                 <td>Nebensaison</td>
-                <td>CHF 3’500.–</td>
+                <td>CHF 3'000.–</td>
                 <td>4 Nächte</td>
             </tr>
             <tr>
                 <td>04.04. – 06.04.2026 🐣</td>
                 <td>Hochsaison</td>
-                <td>CHF 4’200.–</td>
+                <td>CHF 3'500.–</td>
                 <td>4 Nächte</td>
             </tr>
         </table>
         <p class="text-lg text-gray-600 mt-4 text-center"><strong>Hinweis:</strong> Freitag- und Samstagnächte unterliegen einem Zuschlag von CHF 50.– pro Nacht, der im Wochenpreis bereits eingerechnet ist.<br>
-        ✔ Preis gilt für bis zu 4 Personen<br>
-        ✔ Jede weitere Person: CHF 30.– / Nacht<br>
-        ✔ Buchung direkt über <a href="https://www.airbnb.ch/rooms/46182771">Airbnb</a> oder per <a href="mailto:panoramablick@example.com">E-Mail</a> / <a href="https://wa.me/1234567890" class="whatsapp-btn">WhatsApp</a> (Gebühren sparen).</p>
+        ✔ Buchung direkt über <a href="https://www.airbnb.ch/rooms/46182771">Airbnb</a> oder per <a href="mailto:panoramablick@example.com">E-Mail</a>.</p>
     </section>
 
     <!-- Gondelbahn Section -->
     <section id="gondelbahn" class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Fahrtzeiten und Preise der Gondelbahn</h2>
-            <p class="text-lg text-gray-600 mb-4 text-center">Öffnungszeiten Wintersaison 2025/26<br>Anlagen (13. Dezember 2025 bis 6. April 2026)<br>Für Infos zu den offenen Anlagen klicken Sie <a href="https://www.melchsee-frutt.ch/de/winter/anlagen" target="_blank" class="text-blue-600 hover:underline">hier</a>.</p>
-            <h3 class="text-xl font-semibold text-gray-700 mb-4 text-center">Gondelbahn Stöckalp – Melchsee-Frutt</h3>
+            <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Offnungszeiten Wintersaison 2025/26</h2>
+            <h3 class="text-xl font-semibold text-gray-700 mb-4 text-center">Anlagen (13. Dezember 2025 bis 6. April 2026)</h3>
+            <p class="text-lg text-gray-600 mb-4 text-center">Fur Infos zu den offenen Anlagen klicken Sie <a href="https://www.melchsee-frutt.ch/winter/home-info/betriebszeiten-winter/" target="_blank" class="text-blue-600 hover:underline">hier</a>.</p>
+            <h4 class="text-lg font-semibold text-gray-700 mb-2 text-center">Gondelbahn Stockalp – Melchsee-Frutt</h4>
             <p class="text-lg text-gray-600 mb-4 text-center">
                 Montag bis Donnerstag: 08:25 – 17:30 Uhr<br>
                 Freitag: 08:25 – 17:30 / 19:00 – 20:00*, Nachtfahrt um 21:15 Uhr<br>
@@ -182,8 +200,8 @@
                 *Nachtschlitteln (Nachtschlittelsaison)<br>
                 Freitag, Samstag: 19:00 – 21:30 Uhr
             </p>
-
-            <h3 class="text-xl font-semibold text-gray-700 mb-4 text-center">Preise</h3>
+            <p class="text-lg text-gray-600 mb-4 text-center"></p>
+            <h4 class="text-lg font-semibold text-gray-700 mb-2 text-center">Preise</h4>
             <table>
                 <tr>
                     <th></th>
@@ -198,13 +216,68 @@
                     <td>CHF 14.00</td>
                 </tr>
                 <tr>
-                    <td>Hin- und Rückfahrt</td>
+                    <td>Hin- und Ruckfahrt</td>
                     <td>CHF 43.00</td>
                     <td>CHF 21.50</td>
                     <td>CHF 21.50</td>
                 </tr>
             </table>
-            <p class="text-lg text-gray-600 mt-4 text-center">Gültig vom 13.12.2025 – 06.04.2026</p>
+            <p class="text-lg text-gray-600 mt-4 text-center">Gultig vom 13.12.2025 – 06.04.2026</p>
+            <h4 class="text-lg font-semibold text-gray-700 mb-2 text-center">Sesselbahn Cheselen</h4>
+            <p class="text-lg text-gray-600 mb-4 text-center">Täglich: 08:30 – 16:00 Uhr</p>
+            <h4 class="text-lg font-semibold text-gray-700 mb-2 text-center">Sesselbahn Jaest</h4>
+            <p class="text-lg text-gray-600 mb-4 text-center">Täglich: 08:30 – 16:05 Uhr</p>
+            <h4 class="text-lg font-semibold text-gray-700 mb-2 text-center">Sesselbahn Bonistock</h4>
+            <p class="text-lg text-gray-600 mb-4 text-center">Täglich: 08:45 – 16:15 Uhr</p>
+            <h4 class="text-lg font-semibold text-gray-700 mb-2 text-center">Sesselbahn Erzegg</h4>
+            <p class="text-lg text-gray-600 mb-4 text-center">Täglich: 08:45 – 16:00 Uhr</p>
+            <h4 class="text-lg font-semibold text-gray-700 mb-2 text-center">Pendelbahn Distelboden – Bonistock</h4>
+            <p class="text-lg text-gray-600 mb-4 text-center">Täglich: Bergfahrten (alle 20 Minuten): 08:40 – 16:20 Uhr<br>Talfahrten (alle 20 Minuten): 08:45 – 16:25 Uhr<br>Bei grossem Gasteaufkommen durchgehender Betrieb.</p>
+            <h4 class="text-lg font-semibold text-gray-700 mb-2 text-center">Verbindungslift Melchsee</h4>
+            <p class="text-lg text-gray-600 mb-4 text-center">Täglich (kostenlos): 08:30 – 16:30 Uhr</p>
+            <h4 class="text-lg font-semibold text-gray-700 mb-2 text-center">Panoramalift</h4>
+            <p class="text-lg text-gray-600 mb-4 text-center">Täglich (kostenlos): 00:00 – 24:00 Uhr</p>
+            <h4 class="text-lg font-semibold text-gray-700 mb-2 text-center">Skilift Balmeregg</h4>
+            <p class="text-lg text-gray-600 mb-4 text-center">Täglich: 09:00 – 16:00 Uhr</p>
+            <h4 class="text-lg font-semibold text-gray-700 mb-2 text-center">Skilift Vogelbuel</h4>
+            <p class="text-lg text-gray-600 mb-4 text-center">Täglich: 09:00 – 16:00 Uhr</p>
+            <h4 class="text-lg font-semibold text-gray-700 mb-2 text-center">Kleinkinderlift im Fruttli-Land</h4>
+            <p class="text-lg text-gray-600 mb-4 text-center">Täglich (kostenlos): 09:00 – 16:00 Uhr</p>
+            <h4 class="text-lg font-semibold text-gray-700 mb-2 text-center">Skilift Bettenalp</h4>
+            <p class="text-lg text-gray-600 mb-4 text-center">Nur in Betrieb bei Bedarf: 09:00 – 16:00 Uhr</p>
+            <h4 class="text-lg font-semibold text-gray-700 mb-2 text-center">Rucktransport Fruttli-Land (Dorflift)</h4>
+            <p class="text-lg text-gray-600 mb-4 text-center">Täglich (kostenlos): 09:00 – 16:30 Uhr</p>
+            <h4 class="text-lg font-semibold text-gray-700 mb-2 text-center">Schneetaxi</h4>
+            <p class="text-lg text-gray-600 mb-4 text-center">Montag bis Sonntag: 08:20 – 17:00 Uhr<br>Freitag und Samstag nur auf Voranmeldung bis Mittags (041 669 70 55): 18:45 – 19:45 Uhr, je nach Witterung kann aus Sicherheitsgrunden der Taxibetrieb eingestellt werden. Das Taxi bietet Platz fur 9 Personen.</p>
+            <h3 class="text-xl font-semibold text-gray-700 mb-4 text-center">Pisten (13. Dezember 2025 bis 6. April 2026)</h3>
+            <table>
+                <tr>
+                    <th>Piste</th>
+                    <th>Offnungszeiten</th>
+                </tr>
+                <tr>
+                    <td>Erzegg</td>
+                    <td>Täglich: 08:45 – 16:15 Uhr</td>
+                </tr>
+                <tr>
+                    <td>Balmeregg</td>
+                    <td>Täglich: 09:00 – 16:15 Uhr</td>
+                </tr>
+                <tr>
+                    <td>Vogelbuel</td>
+                    <td>Täglich: 09:00 – 16:15 Uhr</td>
+                </tr>
+                <tr>
+                    <td>Bonistock – Stockalp</td>
+                    <td>Täglich: 08:30 – 17:00 Uhr</td>
+                </tr>
+                <tr>
+                    <td>Melchsee-Frutt – Stockalp</td>
+                    <td>Täglich: 08:00 – 17:30 Uhr</td>
+                </tr>
+            </table>
+            <h3 class="text-xl font-semibold text-gray-700 mb-4 text-center">Schlittelweg (13. Dezember 2025 bis 6. April 2026)</h3>
+            <p class="text-lg text-gray-600 mb-4 text-center">Melchsee-Frutt – Stockalp<br>Täglich: 08:00 – 17:30 Uhr</p>
         </div>
     </section>
 
@@ -213,7 +286,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Kontakt</h2>
             <p class="text-lg text-gray-600 mb-8 text-center">
-                Haben Sie Fragen oder möchten Sie mehr über die Ferienwohnung Panoramablick erfahren? Kontaktieren Sie uns!
+                Hey, hast du Fragen oder möchtest du mehr über meine Ferienwohnung Panoramablick erfahren? Schreib mir gerne – ich freue mich darauf, von dir zu hören!
             </p>
             <div class="text-center text-gray-600">
                 <p><strong>Panoramablick Melchsee-Frutt</strong></p>
@@ -224,25 +297,35 @@
             <div class="mt-8 text-center">
                 <a href="mailto:toogood@engelberger.law" class="bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700">E-Mail senden</a>
             </div>
+            <div class="mt-8 max-w-lg mx-auto contact-form">
+                <form>
+                    <input type="text" placeholder="Vorname" required>
+                    <input type="text" placeholder="Nachname" required>
+                    <input type="email" placeholder="E-Mail-Adresse" required>
+                    <input type="tel" placeholder="Telefonnummer" required>
+                    <textarea placeholder="Deine Nachricht" rows="4" required></textarea>
+                    <button type="submit">Anfrage senden</button>
+                </form>
+            </div>
         </div>
     </section>
 
     <!-- Hausregeln Section -->
-    <section id="hausregeln" class="py-16 bg-white hidden" id="hausregeln-section">
+    <section id="hausregeln" class="py-16 bg-white" id="hausregeln-section">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Hausregeln</h2>
             <h3 class="text-xl font-semibold text-gray-700 mb-4">Unsere Hausordnung</h3>
-            <p class="text-lg text-gray-600 mb-4">Unsere Wohnung soll wie ein zweites Zuhause für Sie und unsere Gäste sein. Deshalb liegt es uns am Herzen, dass unsere Wohnung immer in einem ordentlichen Zustand ist. Mit der Einrichtung haben wir uns sehr viele Mühe gegeben und hoffen sehr, dass Sie alles vorfinden, was Sie benötigen. Wir bitten Sie höflichst, alle Einrichtungsgegenstände so pfleglich zu behandeln, als wären diese Ihr Eigentum.</p>
-            <h3 class="text-xl font-semibold text-gray-700 mb-4">Beschädigungen</h3>
-            <p class="text-lg text-gray-600 mb-4">Niemand beschädigt absichtlich Sachen, jedoch kann es jedem passieren, dass einmal etwas kaputtgeht. Wir bitten Sie, uns den entstandenen Schäden mitzuteilen, damit wir rechtzeitig Ersatz für die nachfolgenden Gäste beschaffen können. Der Mieter haftet für Beschädigungen in Höhe der Wiederbeschaffungskosten.</p>
+            <p class="text-lg text-gray-600 mb-4">Unsere Wohnung soll wie ein zweites Zuhause für dich und unsere Gaste sein. Deshalb liegt es uns am Herzen, dass unsere Wohnung immer in einem ordentlichen Zustand ist. Mit der Einrichtung haben wir uns sehr viele Muehe gegeben und hoffen sehr, dass du alles vorfindest, was du benoetigst. Wir bitten dich hoflichst, alle Einrichtungsgegenstande so pfleglich zu behandeln, als waren diese dein Eigentum.</p>
+            <h3 class="text-xl font-semibold text-gray-700 mb-4">Beschadigungen</h3>
+            <p class="text-lg text-gray-600 mb-4">Niemand beschadigt absichtlich Sachen, jedoch kann es jedem passieren, dass einmal etwas kaputtgeht. Wir bitten dich, uns den entstandenen Schaden mitzuteilen, damit wir rechtzeitig Ersatz fur die nachfolgenden Gaste beschaffen konnen. Der Mieter haftet fur Beschadigungen in Hohe der Wiederbeschaffungskosten.</p>
             <h3 class="text-xl font-semibold text-gray-700 mb-4">Rauchen</h3>
-            <p class="text-lg text-gray-600 mb-4">Unsere Wohnung ist eine Nichtraucherwohnung! Bitte halten Sie sich daran und rauchen Sie draußen. Es steht ein Aschenbecher auf der Terrasse zur Verfügung.</p>
+            <p class="text-lg text-gray-600 mb-4">Unsere Wohnung ist eine Nichtraucherwohnung! Bitte halte dich daran und rauche drauBen. Es steht ein Aschenbecher auf der Terrasse zur Verfugung.</p>
             <h3 class="text-xl font-semibold text-gray-700 mb-4">Sorgfaltspflicht</h3>
-            <p class="text-lg text-gray-600 mb-4">Wir bitten alle unsere Gäste, das Mietobjekt pfleglich zu behandeln und dafür Sorge zu tragen, dass auch Mitreisende und Angehörigen die Mietbedingungen einhalten. Die Eingangstür soll grundsätzlich geschlossen sein und beim Verlassen per Schlüssel verschlossen werden. Ebenso sind auch alle Fenster bei Verlassen der Wohnung zu schließen, um mögliche Schäden durch Unwetter zu vermeiden. Mit den Ressourcen Wasser und Strom ist schonend umzugehen.</p>
+            <p class="text-lg text-gray-600 mb-4">Wir bitten alle unsere Gaste, das Mietobjekt pfleglich zu behandeln und dafur Sorge zu tragen, dass auch Mitreisende und Angehorigen die Mietbedingungen einhalten. Die Eingangstur soll grundsatzlich geschlossen sein und beim Verlassen per Schlussel verschlossen werden. Ebenso sind auch alle Fenster bei Verlassen der Wohnung zu schlieBen, um mogliche Schaden durch Unwetter zu vermeiden. Mit den Ressourcen Wasser und Strom ist schonend umzugehen.</p>
             <h3 class="text-xl font-semibold text-gray-700 mb-4">Ruhezeiten</h3>
-            <p class="text-lg text-gray-600 mb-4">Im Sinne einer guten Nachbarschaft bitten wir Sie, die öffentlichen Ruhezeiten wie Mittag, Nacht und Sonntagsruhe einzuhalten. Auch in der Ferienwohnung selbst sollte aus Rücksicht zwischen 22.00 und 07.00 Uhr Ruhe gehalten werden. Ebenfalls sind Veranstaltungen und Feiern untersagt.</p>
+            <p class="text-lg text-gray-600 mb-4">Im Sinne einer guten Nachbarschaft bitten wir dich, die offentlich Ruhezeiten wie Mittag, Nacht und Sonntagsruhe einzuhalten. Auch in der Ferienwohnung selbst sollte aus Rucksicht zwischen 22.00 und 07.00 Uhr Ruhe gehalten werden. Ebenfalls sind Veranstaltungen und Feiern untersagt.</p>
             <h3 class="text-xl font-semibold text-gray-700 mb-4">Haftung</h3>
-            <p class="text-lg text-gray-600 mb-4">Der Vermieter haftet nicht für Wertgegenstände der Gäste. Mit der Buchung der Ferienwohnung gehen wir davon aus, dass die Hausordnung anerkannt wird. Vielen Dank für Ihre Einhaltung und Aufmerksamkeit. Wir wünschen Ihnen einen angenehmen Aufenthalt, mit viel Spaß, Entspannung und Erholung.</p>
+            <p class="text-lg text-gray-600 mb-4">Der Vermieter haftet nicht fur Wertgegenstande der Gaste. Mit der Buchung der Ferienwohnung gehen wir davon aus, dass die Hausordnung anerkannt wird. Vielen Dank fur deine Einhaltung und Aufmerksamkeit. Wir wunschen dir einen angenehmen Aufenthalt, mit viel Spass, Entspannung und Erholung.</p>
         </div>
     </section>
 
@@ -279,13 +362,9 @@
         document.getElementById('hausregeln-btn').addEventListener('click', function(e) {
             e.preventDefault();
             const section = document.getElementById('hausregeln-section');
-            section.classList.toggle('hidden');
-            if (!section.classList.contains('hidden')) {
-                section.scrollIntoView({ behavior: 'smooth' });
-            }
+            section.scrollIntoView({ behavior: 'smooth' });
         });
 
-        // Sticky Book Button
         window.addEventListener('scroll', function() {
             const bookButton = document.getElementById('book-button');
             if (window.scrollY > 100) {
