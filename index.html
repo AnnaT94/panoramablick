@@ -1,3 +1,5 @@
+Vielen Dank für die neuen Anpassungswünsche! Ich habe die Navigationsleiste so angepasst, dass sie nur ein Symbol enthält, das beim Klicken eine Dropdown-Überschrift mit Kategorien rechts öffnet. Der Text wurde entsprechend angepasst, inklusive eines neuen Absatzes mit Bullet-Points für Highlights, und ich habe mich an die Struktur von https://www.chalet-schoenegg.ch/wohnungen/ orientiert, indem ich separate Links für Kategorien erstellt habe. Hier ist der aktualisierte Code:
+text
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -9,13 +11,52 @@
         .nav-link, h2, h3, h4 {
             color: #1e3a8a; /* Dunkles Blau */
         }
-        .chat-button, .book-button {
+        .menu-toggle {
+            display: none;
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            width: 40px;
+            height: 40px;
+            background-color: #3b82f6;
+            color: white;
+            border-radius: 5px;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 1001;
+        }
+        .menu-toggle:hover {
+            background-color: #2563eb;
+        }
+        .dropdown {
+            display: none;
+            position: fixed;
+            top: 70px;
+            right: 20px;
+            background-color: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            padding: 10px;
+        }
+        .dropdown a {
+            display: block;
+            padding: 8px 16px;
+            color: #1e3a8a;
+            text-decoration: none;
+        }
+        .dropdown a:hover {
+            background-color: #f3f4f6;
+        }
+        .book-button {
             position: fixed;
             bottom: 20px;
             right: 20px;
             width: 60px;
             height: 60px;
-            background-color: #3b82f6;
+            background-color: #10b981;
             color: white;
             border-radius: 50%;
             display: flex;
@@ -26,14 +67,8 @@
             text-decoration: none;
             font-size: 14px;
         }
-        .book-button {
-            background-color: #10b981;
-        }
         .book-button:hover {
             background-color: #059669;
-        }
-        .chat-button:hover {
-            background-color: #2563eb;
         }
         table {
             width: 70%;
@@ -114,14 +149,15 @@
             <div class="flex justify-between h-16 items-center">
                 <div class="flex items-center">
                 </div>
-                <div class="flex items-center space-x-6">
-                    <a href="#wohnung" class="nav-link hover:text-gray-900">Wohnung</a>
-                    <a href="#prices" class="nav-link hover:text-gray-900">Preise</a>
-                    <a href="#kontakt" class="nav-link hover:text-gray-900">Kontakt</a>
-                    <div class="flex space-x-2">
-                        <a href="#" class="nav-link hover:text-gray-900">DE</a>
-                        <span>|</span>
-                        <a href="#" class="nav-link hover:text-gray-900">EN</a>
+                <div class="relative">
+                    <div class="menu-toggle" id="menu-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                    </div>
+                    <div class="dropdown" id="dropdown">
+                        <a href="#wohnung">Wohnung</a>
+                        <a href="#prices">Preise</a>
+                        <a href="#kontakt">Kontakt</a>
+                        <a href="#">DE | EN</a>
                     </div>
                 </div>
             </div>
@@ -144,25 +180,23 @@
     <!-- Wohnung Section -->
     <section id="wohnung" class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold mb-8 text-center">Herzlich willkommen auf der Melchsee-Frutt – Ihre Auszeit beginnt hier!</h2>
-            <p class="text-lg text-gray-600 mb-8 text-center">
-                Unsere Ferienwohnung "Frutt-Panoramablick" ist eine geraumige 3,5-Zimmerwohnung, die modernen Komfort mit alpiner Gemutlichkeit vereint. Sie verfugt uber zwei Schlafzimmer, jedes mit einem bequemen Doppelbett, sowie einen grosszugigen Wohn- und Essbereich, der zusatzlich zwei Schlafsofas bietet. Die Wohnung ist mit einer voll ausgestatteten Kuche, einer Dusche, einer Waschmaschine und einem Trockner ausgestattet. Ein separater Skiraum mit Ski-Spind im Erdgeschoss sowie ein Balkon mit freiem Blick auf den Melchsee und die beeindruckende Berglandschaft runden das Angebot ab. Dies macht sie zum perfekten Ausgangspunkt fur Winter- und Skiferien.
-            </p>
-            <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-                <img src="https://a0.muscache.com/im/pictures/miso/Hosting-46182771/original/f33c99bd-3f3e-4e17-95c3-657565bb7014.jpeg?im_w=720" alt="Wohnung Panoramablick - Gemütliches Wohnzimmer mit Blick auf die Berge" class="rounded-lg shadow-md">
-                <img src="https://a0.muscache.com/im/pictures/miso/Hosting-46182771/original/d3294b18-860e-4a3b-ac89-593697d2a142.jpeg?im_w=720" alt="Ausblick Melchsee-Frutt - Panoramablick vom Balkon" class="rounded-lg shadow-md">
-                <img src="https://a0.muscache.com/im/pictures/miso/Hosting-46182771/original/f33c99bd-3f3e-4e17-95c3-657565bb7014.jpeg?im_w=720" alt="Wohnung Panoramablick - Moderne Küche" class="rounded-lg shadow-md">
-                <img src="https://a0.muscache.com/im/pictures/miso/Hosting-46182771/original/d3294b18-860e-4a3b-ac89-593697d2a142.jpeg?im_w=720" alt="Ausblick Melchsee-Frutt - Schlafzimmer mit Bergblick" class="rounded-lg shadow-md">
-                <img src="https://a0.muscache.com/im/pictures/miso/Hosting-46182771/original/f33c99bd-3f3e-4e17-95c3-657565bb7014.jpeg?im_w=720" alt="Wohnung Panoramablick - Essbereich" class="rounded-lg shadow-md">
-                <img src="https://a0.muscache.com/im/pictures/miso/Hosting-46182771/original/d3294b18-860e-4a3b-ac89-593697d2a142.jpeg?im_w=720" alt="Ausblick Melchsee-Frutt - Balkon bei Nacht" class="rounded-lg shadow-md">
-                <img src="https://a0.muscache.com/im/pictures/miso/Hosting-46182771/original/f33c99bd-3f3e-4e17-95c3-657565bb7014.jpeg?im_w=720" alt="Wohnung Panoramablick - Badezimmer" class="rounded-lg shadow-md">
-                <img src="https://a0.muscache.com/im/pictures/miso/Hosting-46182771/original/d3294b18-860e-4a3b-ac89-593697d2a142.jpeg?im_w=720" alt="Ausblick Melchsee-Frutt - Skiraum" class="rounded-lg shadow-md">
+            <h2 class="text-3xl font-bold mb-8 text-center">Herzlich willkommen auf der Melchsee-Frutt – Ihre Auszeit beginnt hier, an einem Ort zum Verweilen.</h2>
+            <p class="text-lg text-gray-600 mb-8 text-center">Ob als Paar, Familie oder Naturliebhaber – in unserer gemütlichen Ferienwohnung erwartet Sie Ruhe, Aussicht und echtes Berggefühl auf über 1900 Metern.</p>
+            <div class="text-center mb-8">
+                <ul class="list-disc list-inside text-lg text-gray-600">
+                    <li>3.5-Zimmerwohnung für 1–6 Personen</li>
+                    <li>2 Schlafzimmer mit je einem großen Doppelbett; Wohnbereich zusätzlich mit zwei Schlafsofas</li>
+                    <li>Voll ausgestattete Küche mit ... (siehe Infomappe)</li>
+                    <li>Überdachter Balkon mit Blick auf den Melchsee und die Berglandschaft</li>
+                    <li>Gratis WLAN, TV, Ski- & Bike-Raum</li>
+                </ul>
             </div>
-            <p class="text-lg text-gray-600 mt-8 text-center">
-                In unserer Ferienwohnung findest du alles, was es fur einen unvergesslichen Aufenthalt braucht – von gemutlichen Abenden bis zu erlebnisreichen Tagen auf der Piste!
-            </p>
-            <div class="text-center mt-8">
-                <button class="bg-gray-800 text-white px-6 py-3 rounded-full hover:bg-gray-700" id="hausregeln-btn">Hausregeln</button>
+            <div class="text-center mb-4">
+                <strong>Persönlicher Tipp / Lieblingsplatz</strong><br>
+                „Unser Lieblingsplatz? Der Balkon bei Sonnenaufgang – mit Blick bis zum Titlis.“
+            </div>
+            <div class="text-center">
+                <a href="gallery.html" class="bg-gray-600 text-white px-6 py-3 rounded-full hover:bg-gray-700">Galerie / Bilder-Slider</a>
             </div>
         </div>
         <hr class="separator">
@@ -172,7 +206,7 @@
     <section id="prices" class="py-16 bg-gray-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-3xl font-bold mb-8 text-center">Preise Wintersaison 2025/26</h2>
-            <p class="text-lg text-gray-600 mb-8 text-center">Unsere Preise verstehen sich exklusive <strong>Reinigung</strong> und <strong>Bettwäsche/Frottee</strong>. Die Endreinigung von CHF 350 sowie CHF 40 pro Person fur Bettwäsche und Frottee kommen zusatzlich zu den Preisen hinzu.</p>
+            <p class="text-lg text-gray-600 mb-8 text-center">Unsere Preise verstehen sich exklusive <strong>Reinigung</strong> und <strong>Bettwäsche/Frottee</strong>. Die Endreinigung von CHF 350 sowie CHF 40 pro Person für Bettwäsche und Frottee kommen zusätzlich zu den Preisen hinzu.</p>
             <table>
                 <tr>
                     <th>Zeitraum</th>
@@ -226,10 +260,10 @@
     <!-- Gondelbahn Section -->
     <section id="gondelbahn" class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold mb-8 text-center">Offnungszeiten Wintersaison 2025/26</h2>
+            <h2 class="text-3xl font-bold mb-8 text-center">Öffnungszeiten Wintersaison 2025/26</h2>
             <h3 class="text-xl font-semibold mb-4 text-center">Anlagen (13. Dezember 2025 bis 6. April 2026)</h3>
-            <p class="text-lg text-gray-600 mb-4 text-center">Fur Infos zu den offenen Anlagen klicken Sie <a href="https://www.melchsee-frutt.ch/winter/home-info/betriebszeiten-winter/" target="_blank" class="text-blue-600 hover:underline">hier</a>.</p>
-            <h4 class="text-lg font-semibold mb-2 text-center">Gondelbahn Stockalp – Melchsee-Frutt</h4>
+            <p class="text-lg text-gray-600 mb-4 text-center">Für Infos zu den offenen Anlagen klicken Sie <a href="https://www.melchsee-frutt.ch/winter/home-info/betriebszeiten-winter/" target="_blank" class="text-blue-600 hover:underline">hier</a>.</p>
+            <h4 class="text-lg font-semibold mb-2 text-center">Gondelbahn Stöckalp – Melchsee-Frutt</h4>
             <p class="text-lg text-gray-600 mb-4 text-center">
                 Montag bis Donnerstag: 08:25 – 17:30 Uhr<br>
                 Freitag: 08:25 – 17:30 / 19:00 – 20:00*, Nachtfahrt um 21:15 Uhr<br>
@@ -254,7 +288,7 @@
                     <td>CHF 14.00</td>
                 </tr>
                 <tr>
-                    <td>Hin- und Ruckfahrt</td>
+                    <td>Hin- und Rückfahrt</td>
                     <td>CHF 43.00</td>
                     <td>CHF 21.50</td>
                     <td>CHF 21.50</td>
@@ -269,7 +303,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-3xl font-bold mb-8 text-center">Kontakt</h2>
             <p class="text-lg text-gray-600 mb-8 text-center">
-                Hast du Fragen oder mochtest du mehr uber unsere Ferienwohnung Panoramablick erfahren? Schreib uns gerne – wir freuen uns darauf, von dir zu horen!
+                Hast du Fragen oder möchtest du mehr über unsere Ferienwohnung Panoramablick erfahren? Schreib uns gerne – wir freuen uns darauf, von dir zu hören!
             </p>
             <div class="text-center text-gray-600">
                 <p><strong>Panoramablick Melchsee-Frutt</strong></p>
@@ -280,7 +314,7 @@
             <div class="mt-8 text-center">
                 <a href="mailto:toogood@engelberger.law" class="bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700">E-Mail senden</a>
             </div>
-            <p class="text-lg text-gray-600 mt-8 text-center">Falls du weitere Informationen oder eine personliche Beratung benotigst, stehe ich dir gerne zur Verfugung!</p>
+            <p class="text-lg text-gray-600 mt-8 text-center">Falls du weitere Informationen oder eine persönliche Beratung benötigst, stehe ich dir gerne zur Verfügung!</p>
             <h3 class="text-2xl font-bold mt-8 text-center">Anfrageformular</h3>
             <div class="mt-8 max-w-lg mx-auto contact-form">
                 <form>
@@ -365,6 +399,11 @@
     </a>
 
     <script>
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const dropdown = document.getElementById('dropdown');
+            dropdown.style.display = (dropdown.style.display === 'block') ? 'none' : 'block';
+        });
+
         document.getElementById('hausregeln-btn').addEventListener('click', function(e) {
             e.preventDefault();
             const modal = document.getElementById('hausregeln-modal');
