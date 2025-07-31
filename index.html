@@ -16,19 +16,12 @@
       overflow-x: hidden;
     }
     .hero {
-      position: fixed;
-      top: 0;
-      left: 0;
       width: 100%;
       height: 100vh;
-      background: url no-repeat center/cover;
-      z-index: -1;
+      background: url('https://www.lav.ch/application/files/1117/5397/2435/4.jpeg') no-repeat center/cover;
     }
     .content {
-      position: relative;
-      z-index: 1;
       background-color: #f3f4f6;
-      padding-top: 100vh;
       padding-bottom: 20px;
     }
     .tile {
@@ -37,6 +30,9 @@
       padding: 20px;
       margin-bottom: 20px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .tile.transparent {
+      background-color: rgba(255, 255, 255, 0.7);
     }
     h2 {
       font-family: 'Broadway', cursive;
@@ -47,8 +43,6 @@
 <body>
   <div class="hero"></div>
   <div class="content">
-    <!-- Vorherige Abschnitte -->
-
     <!-- Ausstattung -->
     <section id="ausstattung" class="bg-gray-100">
       <div class="max-w-4xl mx-auto px-4">
@@ -71,7 +65,7 @@
     <!-- Kontakt -->
     <section id="kontakt" class="bg-gray-100">
       <div class="max-w-4xl mx-auto px-4">
-        <div class="tile">
+        <div class="tile transparent">
           <h2 class="text-3xl font-bold mb-6 text-center">Kontakt & Buchung</h2>
           <p class="text-lg text-center">Für Anfragen oder Buchungen können Sie uns gerne per E-Mail kontaktieren oder direkt über Airbnb buchen.</p>
           <p class="text-center mt-4">
