@@ -10,7 +10,7 @@
             color: #1e3a8a; /* Dunkles Blau */
         }
         .menu-toggle {
-            display: none;
+            display: block;
             position: fixed;
             top: 20px;
             right: 20px;
@@ -19,6 +19,7 @@
             background-color: #3b82f6;
             color: white;
             border-radius: 5px;
+            display: flex;
             align-items: center;
             justify-content: center;
             cursor: pointer;
@@ -63,7 +64,8 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             z-index: 1000;
             text-decoration: none;
-            font-size: 14px;
+            font-size: 12px;
+            flex-direction: column;
         }
         .book-button:hover {
             background-color: #059669;
@@ -138,6 +140,12 @@
             color: black;
             text-decoration: none;
         }
+        footer {
+            font-family: 'Arial', sans-serif; /* Ähnlich wie auf Chalet Schönegg */
+        }
+        footer p, footer h3, footer a {
+            color: white;
+        }
     </style>
 </head>
 <body class="bg-gray-100 font-sans">
@@ -163,9 +171,9 @@
     </nav>
 
     <!-- Logo Section -->
-    <section class="py-8 bg-white">
+    <section class="py-4 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <img src="https://www.lav.ch/application/files/2617/5388/6074/Screenshot_2025-07-30_at_08-35-41_Free_Logo_Maker_-_Get_Custom_Logo_Designs_in_Minutes_Looka.png" alt="Panoramablick Melchsee-Frutt Logo" class="h-48 mx-auto">
+            <img src="https://www.lav.ch/application/files/2617/5388/6074/Screenshot_2025-07-30_at_08-35-41_Free_Logo_Maker_-_Get_Custom_Logo_Designs_in_Minutes_Looka.png" alt="Panoramablick Melchsee-Frutt Logo" class="h-64 mx-auto">
         </div>
     </section>
 
@@ -193,8 +201,15 @@
                 <strong>Persönlicher Tipp / Lieblingsplatz</strong><br>
                 „Unser Lieblingsplatz? Der Balkon bei Sonnenaufgang – mit Blick bis zum Titlis.“
             </div>
-            <div class="text-center">
-                <a href="gallery.html" class="bg-gray-600 text-white px-6 py-3 rounded-full hover:bg-gray-700">Galerie / Bilder-Slider</a>
+            <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                <img src="https://a0.muscache.com/im/pictures/miso/Hosting-46182771/original/f33c99bd-3f3e-4e17-95c3-657565bb7014.jpeg?im_w=720" alt="Wohnung Panoramablick - Gemütliches Wohnzimmer mit Blick auf die Berge" class="rounded-lg shadow-md">
+                <img src="https://a0.muscache.com/im/pictures/miso/Hosting-46182771/original/d3294b18-860e-4a3b-ac89-593697d2a142.jpeg?im_w=720" alt="Ausblick Melchsee-Frutt - Panoramablick vom Balkon" class="rounded-lg shadow-md">
+                <img src="https://a0.muscache.com/im/pictures/miso/Hosting-46182771/original/f33c99bd-3f3e-4e17-95c3-657565bb7014.jpeg?im_w=720" alt="Wohnung Panoramablick - Moderne Küche" class="rounded-lg shadow-md">
+                <img src="https://a0.muscache.com/im/pictures/miso/Hosting-46182771/original/d3294b18-860e-4a3b-ac89-593697d2a142.jpeg?im_w=720" alt="Ausblick Melchsee-Frutt - Schlafzimmer mit Bergblick" class="rounded-lg shadow-md">
+                <img src="https://a0.muscache.com/im/pictures/miso/Hosting-46182771/original/f33c99bd-3f3e-4e17-95c3-657565bb7014.jpeg?im_w=720" alt="Wohnung Panoramablick - Essbereich" class="rounded-lg shadow-md">
+                <img src="https://a0.muscache.com/im/pictures/miso/Hosting-46182771/original/d3294b18-860e-4a3b-ac89-593697d2a142.jpeg?im_w=720" alt="Ausblick Melchsee-Frutt - Balkon bei Nacht" class="rounded-lg shadow-md">
+                <img src="https://a0.muscache.com/im/pictures/miso/Hosting-46182771/original/f33c99bd-3f3e-4e17-95c3-657565bb7014.jpeg?im_w=720" alt="Wohnung Panoramablick - Badezimmer" class="rounded-lg shadow-md">
+                <img src="https://a0.muscache.com/im/pictures/miso/Hosting-46182771/original/d3294b18-860e-4a3b-ac89-593697d2a142.jpeg?im_w=720" alt="Ausblick Melchsee-Frutt - Skiraum" class="rounded-lg shadow-md">
             </div>
         </div>
         <hr class="separator">
@@ -312,9 +327,9 @@
             <div class="mt-8 text-center">
                 <a href="mailto:toogood@engelberger.law" class="bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700">E-Mail senden</a>
             </div>
-            <p class="text-lg text-gray-600 mt-8 text-center">Falls du weitere Informationen oder eine persönliche Beratung benötigst, stehe ich dir gerne zur Verfügung!</p>
-            <h3 class="text-2xl font-bold mt-8 text-center">Anfrageformular</h3>
-            <div class="mt-8 max-w-lg mx-auto contact-form">
+            <p class="text-lg text-gray-600 mt-12 text-center">Falls du weitere Informationen oder eine persönliche Beratung benötigst, stehe ich dir gerne zur Verfügung!</p>
+            <h3 class="text-2xl font-bold mt-16 text-center">Anfrageformular</h3>
+            <div class="mt-12 max-w-lg mx-auto contact-form">
                 <form>
                     <input type="text" placeholder="Vorname" required>
                     <input type="text" placeholder="Nachname" required>
@@ -393,7 +408,8 @@
 
     <!-- Book Button -->
     <a href="https://www.airbnb.ch/rooms/46182771?guests=1&adults=1&s=67&unique_share_id=a4406f56-0aac-4b30-9efb-d0755ff40a62" class="book-button" aria-label="Direkt buchen">
-        Direkt buchen
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+        Buchen
     </a>
 
     <script>
