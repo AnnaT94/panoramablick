@@ -6,8 +6,12 @@
     <title>Panoramablick Melchsee-Frutt</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Aptos&display=swap');
+        body {
+            font-family: 'Aptos', sans-serif;
+        }
         .nav-link, h2, h3, h4 {
-            color: #4682B4; /* Dunkles Blau */
+            color: #1e3a8a; /* Dunkles Blau */
         }
         .menu-toggle {
             display: block;
@@ -16,7 +20,7 @@
             right: 20px;
             width: 40px;
             height: 40px;
-            background-color: #3b82f6;
+            background-color: #1e3a8a; /* Blau wie im Logo */
             color: white;
             border-radius: 5px;
             display: flex;
@@ -26,14 +30,14 @@
             z-index: 1001;
         }
         .menu-toggle:hover {
-            background-color: #4682B4;
+            background-color: #163172; /* Dunkleres Blau beim Hover */
         }
         .dropdown {
             display: none;
             position: fixed;
             top: 70px;
             right: 20px;
-            background-color: white;
+            background-color: #1e3a8a; /* Blau wie im Logo */
             border: 1px solid #e5e7eb;
             border-radius: 5px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -43,11 +47,11 @@
         .dropdown a {
             display: block;
             padding: 8px 16px;
-            color: #1e3a8a;
+            color: white;
             text-decoration: none;
         }
         .dropdown a:hover {
-            background-color: #f3f4f6;
+            background-color: #163172; /* Dunkleres Blau beim Hover */
         }
         .book-button {
             position: fixed;
@@ -55,7 +59,7 @@
             right: 20px;
             width: 60px;
             height: 60px;
-            background-color: #10b981;
+            background-color: #1e3a8a; /* Blau wie im Logo */
             color: white;
             border-radius: 50%;
             display: flex;
@@ -68,7 +72,7 @@
             flex-direction: column;
         }
         .book-button:hover {
-            background-color: #4682B4;
+            background-color: #163172; /* Dunkleres Blau beim Hover */
         }
         table {
             width: 70%;
@@ -141,14 +145,14 @@
             text-decoration: none;
         }
         footer {
-            font-family: 'Arial', sans-serif; /* Ähnlich wie auf Chalet Schönegg */
+            font-family: 'Arial', sans-serif;
         }
         footer p, footer h3, footer a {
             color: white;
         }
     </style>
 </head>
-<body class="bg-gray-100 font-sans">
+<body class="bg-gray-100">
     <!-- Navigation -->
     <nav class="bg-white shadow-md sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -196,10 +200,6 @@
                     <li>Überdachter Balkon mit Blick auf den Melchsee und die Berglandschaft</li>
                     <li>Gratis WLAN, TV, Ski- & Bike-Raum</li>
                 </ul>
-            </div>
-            <div class="text-center mb-4">
-                <strong>Persönlicher Tipp / Lieblingsplatz</strong><br>
-                „Unser Lieblingsplatz? Der Balkon bei Sonnenaufgang – mit Blick bis zum Titlis.“
             </div>
             <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
                 <img src="https://a0.muscache.com/im/pictures/miso/Hosting-46182771/original/f33c99bd-3f3e-4e17-95c3-657565bb7014.jpeg?im_w=720" alt="Wohnung Panoramablick - Gemütliches Wohnzimmer mit Blick auf die Berge" class="rounded-lg shadow-md">
@@ -327,7 +327,6 @@
             <div class="mt-8 text-center">
                 <a href="mailto:toogood@engelberger.law" class="bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700">E-Mail senden</a>
             </div>
-            <p class="text-lg text-gray-600 mt-12 text-center">Falls du weitere Informationen oder eine persönliche Beratung benötigst, stehe ich dir gerne zur Verfügung!</p>
             <h3 class="text-2xl font-bold mt-16 text-center">Anfrageformular</h3>
             <div class="mt-12 max-w-lg mx-auto contact-form">
                 <form>
