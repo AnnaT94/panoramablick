@@ -7,10 +7,10 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="icon" type="image/x-icon" href="https://www.lav.ch/application/files/3017/5395/4679/Bild2.png">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Broadway&family=Open+Sans:wght@400;600&family=Roboto:wght@400;500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Broadway&family=Roboto:wght@400;500&display=swap');
         body {
             margin: 0;
-            font-family: 'Open Sans', sans-serif;
+            font-family: 'Roboto', sans-serif;
             background: #f3f4f6;
             overflow-x: hidden;
         }
@@ -22,10 +22,6 @@
             height: 100vh;
             background: url('https://tb-photo.ch/media/images/Art-Galerie/Melchsee-Frutt/_2560xAUTO_crop_center-center_85_none/629489/Melchsee-Frutt_Nacht-2.jpeg') no-repeat center/cover;
             z-index: -1;
-            transition: opacity 0.5s ease;
-        }
-        .hero.scrolled {
-            opacity: 0.3; /* Leicht durchsichtig beim Scrollen */
         }
         .content {
             position: relative;
@@ -40,8 +36,23 @@
             margin-bottom: 20px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
+        .contact-tile {
+            background: rgba(0, 0, 0, 0.3); /* Transparenter für Hintergrundbild */
+            color: #ffffff;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .contact-tile h2, .contact-tile h3, .contact-tile h4 {
+            color: #ffffff;
+        }
         h2, h3, h4 {
             font-family: 'Broadway', cursive;
+            color: #1e3a8a;
+        }
+        .equipment-title {
+            font-family: 'Broadway', cursive;
+            font-size: 1.75rem;
             color: #1e3a8a;
         }
         .equipment-item, footer {
@@ -121,8 +132,8 @@
             background-color: #163172;
         }
         .section-divider {
-            border-top: 2px solid #1e3a8a;
-            margin: 20px 0;
+            border-top: 3px solid #1e3a8a; /* Dicker und farbiger für bessere Abgrenzung */
+            margin: 30px 0; /* Mehr Abstand */
         }
         table {
             width: 100%;
@@ -171,20 +182,28 @@
             height: 100%;
             background-color: rgba(0, 0, 0, 0.5);
             z-index: 1000;
+            justify-content: center;
+            align-items: center;
         }
         .modal-content {
             background-color: rgba(255, 255, 255, 0.8);
-            margin: 15% auto;
+            margin: auto;
             padding: 20px;
             border-radius: 5px;
-            width: 70%;
-            max-height: 70vh;
-            overflow-y: auto;
+            width: 500px;
+            height: 500px;
             color: #1e3a8a;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
         }
         .modal-close {
             color: #aaa;
-            float: right;
+            position: absolute;
+            top: 10px;
+            right: 10px;
             font-size: 28px;
             font-weight: bold;
             cursor: pointer;
@@ -204,7 +223,10 @@
             text-align: center;
         }
         .footer-column:nth-child(2) {
-            text-align: left;
+            text-align: right; /* Links rechtsbündig */
+        }
+        .footer-column:nth-child(3) {
+            display: none; /* Entfernt "Panoramablick Melchsee-Frutt ..." */
         }
         .gallery {
             display: flex;
@@ -215,12 +237,13 @@
             scroll-behavior: smooth;
         }
         .gallery img {
-            width: 48%; /* Ca. 50% für 2 Bilder nebeneinander, mit Gap angepasst */
+            width: 60%; /* Größer auf 60% */
             height: auto;
             object-fit: cover;
             border-radius: 0.5rem;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             flex-shrink: 0;
+            cursor: pointer; /* Zeigt an, dass das Bild anklickbar ist */
         }
         .equipment-item {
             display: flex;
@@ -244,6 +267,31 @@
         }
         .house-rules-button:hover {
             background-color: #163172;
+        }
+        /* Modal für Bildergalerie */
+        .gallery-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            z-index: 1001;
+            justify-content: center;
+            align-items: center;
+        }
+        .gallery-modal img {
+            max-width: 90%;
+            max-height: 90vh;
+        }
+        .gallery-modal .modal-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: #fff;
+            font-size: 28px;
+            cursor: pointer;
         }
     </style>
 </head>
@@ -282,13 +330,13 @@
         <section id="wohnung" class="bg-gray-100">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="tile">
-                    <p class="text-lg mb-6 text-center">Willkommen in unserer gemütlichen Ferienwohnung auf der Melchsee-Frutt!</p>
+                    <p class="text-lg mb-6 text-center">Herzlich willkommen in unserer gemütlichen Ferienwohnung auf der Melchsee-Frutt! Unsere Wohnung bietet Ihnen einen unvergleichlichen Panoramablick auf den wunderschönen Melchsee und die umliegenden Berge. Ideal gelegen, ist sie der perfekte Ausgangspunkt für Wintersport, Wanderungen und erholsame Tage in der Natur. Lassen Sie sich von der einzigartigen Atmosphäre und dem Komfort unserer Unterkunft verzaubern. Wir freuen uns darauf, Ihnen einen unvergesslichen Aufenthalt zu bieten!</p>
                 </div>
                 <div class="section-divider"></div>
                 <div class="tile">
                     <table>
                         <tr>
-                            <td style="vertical-align: top; font-size: 1.5rem;">Ausstattung<br><span style="font-size: 0.875rem;">Entdecken Sie die Annehmlichkeiten unserer Wohnung.</span></td>
+                            <td style="vertical-align: top;"><span class="equipment-title">Ausstattung</span><br><span style="font-size: 0.875rem;">Entdecken Sie die Annehmlichkeiten unserer Wohnung.</span></td>
                             <td>
                                 <div class="equipment-item">3.5-Zimmerwohnung für 1–6 Personen, ideal für jede Reisegruppe!</div>
                                 <div class="equipment-item">2 Schlafzimmer mit gemütlichen Doppelbetten plus zwei Schlafsofas im Wohnbereich.</div>
@@ -302,15 +350,15 @@
                 <div class="section-divider"></div>
                 <div class="tile">
                     <h3 class="text-2xl font-semibold mb-4 text-center">Bildergalerie</h3>
-                    <div class="gallery">
-                        <img src="https://www.lav.ch/application/files/4217/5396/3338/10.jpeg" alt="Wohnung Panoramablick - Bild 10" class="rounded-lg shadow-md">
-                        <img src="https://www.lav.ch/application/files/1517/5396/3337/8.jpeg" alt="Wohnung Panoramablick - Bild 8" class="rounded-lg shadow-md">
-                        <img src="https://www.lav.ch/application/files/4417/5396/3336/7.jpeg" alt="Wohnung Panoramablick - Bild 7" class="rounded-lg shadow-md">
-                        <img src="https://www.lav.ch/application/files/4517/5396/3335/6.jpeg" alt="Wohnung Panoramablick - Bild 6" class="rounded-lg shadow-md">
-                        <img src="https://www.lav.ch/application/files/8917/5396/3335/5.jpeg" alt="Wohnung Panoramablick - Bild 5" class="rounded-lg shadow-md">
-                        <img src="https://www.lav.ch/application/files/6917/5396/3334/4.jpeg" alt="Wohnung Panoramablick - Bild 4" class="rounded-lg shadow-md">
-                        <img src="https://www.lav.ch/application/files/8817/5396/3333/3.jpeg" alt="Wohnung Panoramablick - Bild 3" class="rounded-lg shadow-md">
-                        <img src="https://www.lav.ch/application/files/8817/5396/3332/2.jpeg" alt="Wohnung Panoramablick - Bild 2" class="rounded-lg shadow-md">
+                    <div class="gallery" id="gallery">
+                        <img src="https://www.lav.ch/application/files/4217/5396/3338/10.jpeg" alt="Wohnung Panoramablick - Bild 10">
+                        <img src="https://www.lav.ch/application/files/1517/5396/3337/8.jpeg" alt="Wohnung Panoramablick - Bild 8">
+                        <img src="https://www.lav.ch/application/files/4417/5396/3336/7.jpeg" alt="Wohnung Panoramablick - Bild 7">
+                        <img src="https://www.lav.ch/application/files/4517/5396/3335/6.jpeg" alt="Wohnung Panoramablick - Bild 6">
+                        <img src="https://www.lav.ch/application/files/8917/5396/3335/5.jpeg" alt="Wohnung Panoramablick - Bild 5">
+                        <img src="https://www.lav.ch/application/files/6917/5396/3334/4.jpeg" alt="Wohnung Panoramablick - Bild 4">
+                        <img src="https://www.lav.ch/application/files/8817/5396/3333/3.jpeg" alt="Wohnung Panoramablick - Bild 3">
+                        <img src="https://www.lav.ch/application/files/8817/5396/3332/2.jpeg" alt="Wohnung Panoramablick - Bild 2">
                     </div>
                     <!-- Button for Hausregeln -->
                     <button id="house-rules-btn" class="house-rules-button mt-4" aria-label="Hausregeln anzeigen">
@@ -322,9 +370,9 @@
         </section>
 
         <!-- Preisliste Section -->
-        <section id="prices" class="bg-gray-100">
+        <section id="prices" class="bg-gray-100" style="background: none;">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="tile">
+                <div class="tile" style="background-color: #f9fafb;">
                     <h2 class="text-3xl font-bold mb-6 text-center">Preise Ferienwohnung Wintersaison 2025/26</h2>
                     <p class="text-lg mb-6 text-center">Unsere Preise verstehen sich <strong><u>exklusive</u></strong> <strong><u>Reinigung</u></strong> und <strong><u>Bettwäsche/Frottee</u></strong>. Die Endreinigung von CHF 350 sowie CHF 40 pro Person für Bettwäsche und Frottee kommen zusätzlich zu den Preisen hinzu.</p>
                     <table>
@@ -378,14 +426,14 @@
         </section>
 
         <!-- Gondelbahn Section -->
-        <section id="gondelbahn" class="bg-gray-100">
+        <section id="gondelbahn" class="bg-gray-100" style="background: none;">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="tile text-center">
-                    <h2 class="text-3xl font-bold mb-6">Informationen Gondelbahn Stöckalp - Melchsee-Frutt Winter 2025/26</h2>
-                    <h3 class="text-2xl font-semibold mb-4">Betriebszeiten 13. Dezember 2025 bis 6. April 2026</h3>
-                    <p class="text-lg mb-4">Für Infos zu den offenen Anlagen klicken Sie <a href="https://www.melchsee-frutt.ch/winter/home-info/betriebszeiten-winter/" target="_blank" class="text-blue-600 hover:underline">hier</a>.</p>
+                <div class="tile" style="background-color: #f9fafb;">
+                    <h2 class="text-3xl font-bold mb-6 text-center">Informationen Gondelbahn Stöckalp - Melchsee-Frutt Winter 2025/26</h2>
+                    <h3 class="text-2xl font-semibold mb-4 text-center">Betriebszeiten 13. Dezember 2025 bis 6. April 2026</h3>
+                    <p class="text-lg mb-4 text-center">Für Infos zu den offenen Anlagen klicken Sie <a href="https://www.melchsee-frutt.ch/winter/home-info/betriebszeiten-winter/" target="_blank" class="text-blue-600 hover:underline">hier</a>.</p>
                 </div>
-                <div class="tile">
+                <div class="tile" style="background-color: #f9fafb;">
                     <h3 class="text-2xl font-semibold mb-4 text-center">Gondelbahn Stöckalp – Melchsee-Frutt</h3>
                     <p class="text-lg mb-4 text-center">
                         Montag bis Donnerstag: 08:25 – 17:30 Uhr<br>
@@ -396,7 +444,7 @@
                         Freitag, Samstag: 19:00 – 21:30 Uhr
                     </p>
                 </div>
-                <div class="tile">
+                <div class="tile" style="background-color: #f9fafb;">
                     <h3 class="text-2xl font-semibold mb-4 text-center">Preise</h3>
                     <table>
                         <tr>
@@ -419,18 +467,16 @@
                         </tr>
                     </table>
                 </div>
-                <div class="tile">
-                    <video controls autoplay muted loop playsinline class="w-full h-auto rounded-lg shadow-md">
-                        <source src="https://www.lav.ch/application/files/1317/5396/6229/IMG_0141.MOV" type="video/mov">
-                        Dein Browser unterstützt das Video-Tag nicht.
-                    </video>
+                <!-- Platzhalter für Video (bitte konvertierte Version oder neue URL bereitstellen) -->
+                <div class="tile" style="background-color: #f9fafb;">
+                    <p>Video wird hier eingebettet, sobald es verfügbar ist (z. B. als MP4).</p>
                 </div>
                 <div class="section-divider"></div>
             </div>
         </section>
 
         <!-- Kontakt Section -->
-        <section id="kontakt" class="bg-gray-100">
+        <section id="kontakt" class="bg-gray-100" style="background: url('https://tb-photo.ch/media/images/Art-Galerie/Melchsee-Frutt/_2560xAUTO_crop_center-center_85_none/629489/Melchsee-Frutt_Nacht-2.jpeg') no-repeat center/cover; padding: 40px 0;">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="tile">
                     <h2 class="text-3xl font-bold mb-6 text-center">Unverbindliche Anfrage</h2>
@@ -445,8 +491,8 @@
                         </form>
                     </div>
                 </div>
-                <div class="section-divider"></div>
-                <div class="tile">
+                <div class="section-divider" style="border-color: #ffffff;"></div>
+                <div class="tile contact-tile">
                     <h2 class="text-3xl font-bold mb-6 text-center">Kontakt</h2>
                     <p class="text-lg mb-6 text-center">Hast du Fragen oder möchtest du mehr über unsere Ferienwohnung Panoramablick erfahren? Schreib uns gerne – wir freuen uns darauf, von dir zu hören!</p>
                     <div class="text-center">
@@ -454,9 +500,6 @@
                         <p>Frutt 9, 6068 Melchsee-Frutt</p>
                         <p>E-Mail: toogood@engelberger.law</p>
                         <p>Kontakt: Anna Toogood</p>
-                    </div>
-                    <div class="mt-6 text-center">
-                        <a href="mailto:toogood@engelberger.law" class="bg-1e3a8a text-white px-6 py-3 rounded-full hover:bg-163172">E-Mail senden</a>
                     </div>
                 </div>
             </div>
@@ -489,14 +532,15 @@
                     </div>
                     <div class="footer-column">
                         <h3 class="text-lg font-semibold mb-4">Links</h3>
-                        <ul class="space-y-2">
+                        <ul class="space-y-2 text-right">
                             <li><a href="#" class="hover:underline">Impressum</a></li>
                             <li><a href="#" class="hover:underline">Datenschutz</a></li>
                             <li><a href="#" class="hover:underline">AGB</a></li>
                         </ul>
                     </div>
-                    <div class="footer-column">
-                                   </div>
+                    <div class="footer-column text-center">
+                        <img src="https://www.lav.ch/application/files/8417/5395/1772/Bild1.png" alt="Logo" class="h-20 mx-auto opacity-70">
+                    </div>
                 </div>
             </div>
         </footer>
@@ -532,11 +576,29 @@
                 const hero = document.querySelector('.hero');
                 const bookButton = document.querySelector('.book-button');
                 if (window.scrollY > 100) {
-                    hero.classList.add('scrolled');
                     bookButton.style.display = 'flex';
                 } else {
-                    hero.classList.remove('scrolled');
                     bookButton.style.display = 'none';
+                }
+            });
+
+            // Bildergalerie Modal
+            const galleryImages = document.querySelectorAll('#gallery img');
+            const galleryModal = document.createElement('div');
+            galleryModal.className = 'gallery-modal';
+            galleryModal.innerHTML = '<span class="modal-close" onclick="this.parentElement.style.display=\'none\'">×</span><img>';
+            document.body.appendChild(galleryModal);
+
+            galleryImages.forEach(img => {
+                img.addEventListener('click', function() {
+                    galleryModal.querySelector('img').src = this.src;
+                    galleryModal.style.display = 'flex';
+                });
+            });
+
+            window.addEventListener('click', function(event) {
+                if (event.target.className === 'gallery-modal') {
+                    galleryModal.style.display = 'none';
                 }
             });
         </script>
