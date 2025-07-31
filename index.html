@@ -36,15 +36,15 @@
             display: none;
             position: fixed;
             top: 70px;
-            left: 0;
             right: 0;
+            width: 12.5%; /* 1/8 des Bildschirms */
             bottom: 0;
             background-color: #1e3a8a;
             border: 1px solid #e5e7eb;
             border-radius: 0;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: -4px 4px 6px rgba(0, 0, 0, 0.1);
             z-index: 1000;
-            padding: 40px 0;
+            padding: 20px 0;
             text-align: center;
         }
         .dropdown a {
@@ -52,7 +52,7 @@
             padding: 20px;
             color: white;
             text-decoration: none;
-            font-size: 2rem;
+            font-size: 1.5rem; /* Anpassung für kleinere Breite */
         }
         .dropdown a:hover {
             background-color: #163172;
@@ -195,7 +195,7 @@
     <!-- Logo Section -->
     <section class="py-2 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <img src="https://www.lav.ch/application/files/9115/5488/6074/Panoramablick_Melchsee_Frutt_Logo.png" alt="Panoramablick Melchsee-Frutt Logo" class="h-96 mx-auto">
+            <img src="https://www.lav.ch/application/files/8417/5395/1772/Bild1.png" alt="Panoramablick Melchsee-Frutt Logo" class="h-96 mx-auto">
         </div>
     </section>
 
@@ -224,7 +224,7 @@
                 </ul>
             </div>
             <div class="tile">
-                <h3 class="text-2xl font-semibold mb-4 text-center">Bildergalerie</h3>
+                <h3 class="text-2xl font-semibold mb-4 text-center">Bilder</h3>
                 <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                     <img src="https://a0.muscache.com/im/pictures/miso/Hosting-46182771/original/f33c99bd-3f3e-4e17-95c3-657565bb7014.jpeg?im_w=720" alt="Wohnung Panoramablick - Gemütliches Wohnzimmer mit Blick auf die Berge" class="rounded-lg shadow-md">
                     <img src="https://a0.muscache.com/im/pictures/miso/Hosting-46182771/original/d3294b18-860e-4a3b-ac89-593697d2a142.jpeg?im_w=720" alt="Ausblick Melchsee-Frutt - Panoramablick vom Balkon" class="rounded-lg shadow-md">
@@ -234,6 +234,9 @@
                     <img src="https://a0.muscache.com/im/pictures/miso/Hosting-46182771/original/d3294b18-860e-4a3b-ac89-593697d2a142.jpeg?im_w=720" alt="Ausblick Melchsee-Frutt - Balkon bei Nacht" class="rounded-lg shadow-md">
                     <img src="https://a0.muscache.com/im/pictures/miso/Hosting-46182771/original/f33c99bd-3f3e-4e17-95c3-657565bb7014.jpeg?im_w=720" alt="Wohnung Panoramablick - Badezimmer" class="rounded-lg shadow-md">
                     <img src="https://a0.muscache.com/im/pictures/miso/Hosting-46182771/original/d3294b18-860e-4a3b-ac89-593697d2a142.jpeg?im_w=720" alt="Ausblick Melchsee-Frutt - Skiraum" class="rounded-lg shadow-md">
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- Preisliste Section -->
@@ -330,8 +333,12 @@
                         <td>CHF 43.00</td>
                         <td>CHF 21.50</td>
                         <td>CHF 21.50</td>
+                    </tr>
                 </table>
+            </div>
+        </div>
     </section>
+
     <!-- Kontakt Section -->
     <section id="kontakt" class="py-16 bg-gray-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -359,7 +366,9 @@
                         <textarea placeholder="Deine Nachricht" rows="4" required></textarea>
                         <button type="submit">Anfrage senden</button>
                     </form>
-
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- Modal for Hausregeln -->
