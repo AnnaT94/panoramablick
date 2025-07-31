@@ -51,7 +51,7 @@
             padding: 15px 30px;
             color: white;
             text-decoration: none;
-            font-size: 1.5rem; /* Vergrößerte Schrift */
+            font-size: 1.5rem;
         }
         .dropdown a:hover {
             background-color: #163172;
@@ -77,10 +77,21 @@
         .book-button:hover {
             background-color: #163172;
         }
+        .tile {
+            background-color: white;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .tile:hover {
+            transform: translateY(-5px);
+        }
         table {
-            width: 70%;
+            width: 100%;
             border-collapse: collapse;
-            margin: 1rem auto;
+            margin: 1rem 0;
         }
         th, td {
             border: 1px solid #e5e7eb;
@@ -148,10 +159,13 @@
             text-decoration: none;
         }
         footer {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Aptos', sans-serif;
         }
         footer p, footer h3, footer a {
             color: white;
+        }
+        .footer-column {
+            text-align: center;
         }
     </style>
 </head>
@@ -178,9 +192,9 @@
     </nav>
 
     <!-- Logo Section -->
-    <section class="py-4 bg-white">
+    <section class="py-2 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <img src="https://www.lav.ch/application/files/2617/5388/6074/Screenshot_2025-07-30_at_08-35-41_Free_Logo_Maker_-_Get_Custom_Logo_Designs_in_Minutes_Looka.png" alt="Panoramablick Melchsee-Frutt Logo" class="h-64 mx-auto">
+            <img src="https://www.lav.ch/application/files/2617/5388/6074/Screenshot_2025-07-30_at_08-35-41_Free_Logo_Maker_-_Get_Custom_Logo_Designs_in_Minutes_Looka.png" alt="Panoramablick Melchsee-Frutt Logo" class="h-80 mx-auto">
         </div>
     </section>
 
@@ -191,11 +205,15 @@
     </section>
 
     <!-- Wohnung Section -->
-    <section id="wohnung" class="py-16 bg-white">
+    <section id="wohnung" class="py-16 bg-gray-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold mb-8 text-center">Herzlich willkommen auf der Melchsee-Frutt – Ihre Auszeit beginnt hier, an einem Ort zum Verweilen.</h2>
-            <p class="text-lg text-gray-600 mb-8 text-center">Ob als Paar, Familie oder Naturliebhaber – in unserer gemütlichen Ferienwohnung erwartet Sie Ruhe, Aussicht und echtes Berggefühl auf über 1900 Metern.</p>
-            <div class="text-center mb-8">
+            <div class="tile">
+                <h2 class="text-3xl font-bold mb-6 text-center">Herzlich willkommen auf der Melchsee-Frutt</h2>
+                <p class="text-lg text-gray-600 mb-6 text-center">Ihre Auszeit beginnt hier, an einem Ort zum Verweilen.</p>
+                <p class="text-lg text-gray-600 mb-6 text-center">Ob als Paar, Familie oder Naturliebhaber – in unserer gemütlichen Ferienwohnung erwartet Sie Ruhe, Aussicht und echtes Berggefühl auf über 1900 Metern.</p>
+            </div>
+            <div class="tile">
+                <h3 class="text-2xl font-semibold mb-4 text-center">Ausstattung</h3>
                 <ul class="list-disc list-inside text-lg text-gray-600">
                     <li>3.5-Zimmerwohnung für 1–6 Personen</li>
                     <li>2 Schlafzimmer mit je einem großen Doppelbett; Wohnbereich zusätzlich mit zwei Schlafsofas</li>
@@ -204,142 +222,150 @@
                     <li>Gratis WLAN, TV, Ski- & Bike-Raum</li>
                 </ul>
             </div>
-            <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-                <img src="https://a0.muscache.com/im/pictures/miso/Hosting-46182771/original/f33c99bd-3f3e-4e17-95c3-657565bb7014.jpeg?im_w=720" alt="Wohnung Panoramablick - Gemütliches Wohnzimmer mit Blick auf die Berge" class="rounded-lg shadow-md">
-                <img src="https://a0.muscache.com/im/pictures/miso/Hosting-46182771/original/d3294b18-860e-4a3b-ac89-593697d2a142.jpeg?im_w=720" alt="Ausblick Melchsee-Frutt - Panoramablick vom Balkon" class="rounded-lg shadow-md">
-                <img src="https://a0.muscache.com/im/pictures/miso/Hosting-46182771/original/f33c99bd-3f3e-4e17-95c3-657565bb7014.jpeg?im_w=720" alt="Wohnung Panoramablick - Moderne Küche" class="rounded-lg shadow-md">
-                <img src="https://a0.muscache.com/im/pictures/miso/Hosting-46182771/original/d3294b18-860e-4a3b-ac89-593697d2a142.jpeg?im_w=720" alt="Ausblick Melchsee-Frutt - Schlafzimmer mit Bergblick" class="rounded-lg shadow-md">
-                <img src="https://a0.muscache.com/im/pictures/miso/Hosting-46182771/original/f33c99bd-3f3e-4e17-95c3-657565bb7014.jpeg?im_w=720" alt="Wohnung Panoramablick - Essbereich" class="rounded-lg shadow-md">
-                <img src="https://a0.muscache.com/im/pictures/miso/Hosting-46182771/original/d3294b18-860e-4a3b-ac89-593697d2a142.jpeg?im_w=720" alt="Ausblick Melchsee-Frutt - Balkon bei Nacht" class="rounded-lg shadow-md">
-                <img src="https://a0.muscache.com/im/pictures/miso/Hosting-46182771/original/f33c99bd-3f3e-4e17-95c3-657565bb7014.jpeg?im_w=720" alt="Wohnung Panoramablick - Badezimmer" class="rounded-lg shadow-md">
-                <img src="https://a0.muscache.com/im/pictures/miso/Hosting-46182771/original/d3294b18-860e-4a3b-ac89-593697d2a142.jpeg?im_w=720" alt="Ausblick Melchsee-Frutt - Skiraum" class="rounded-lg shadow-md">
+            <div class="tile">
+                <h3 class="text-2xl font-semibold mb-4 text-center">Bilder</h3>
+                <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                    <img src="https://a0.muscache.com/im/pictures/miso/Hosting-46182771/original/f33c99bd-3f3e-4e17-95c3-657565bb7014.jpeg?im_w=720" alt="Wohnung Panoramablick - Gemütliches Wohnzimmer mit Blick auf die Berge" class="rounded-lg shadow-md">
+                    <img src="https://a0.muscache.com/im/pictures/miso/Hosting-46182771/original/d3294b18-860e-4a3b-ac89-593697d2a142.jpeg?im_w=720" alt="Ausblick Melchsee-Frutt - Panoramablick vom Balkon" class="rounded-lg shadow-md">
+                    <img src="https://a0.muscache.com/im/pictures/miso/Hosting-46182771/original/f33c99bd-3f3e-4e17-95c3-657565bb7014.jpeg?im_w=720" alt="Wohnung Panoramablick - Moderne Küche" class="rounded-lg shadow-md">
+                    <img src="https://a0.muscache.com/im/pictures/miso/Hosting-46182771/original/d3294b18-860e-4a3b-ac89-593697d2a142.jpeg?im_w=720" alt="Ausblick Melchsee-Frutt - Schlafzimmer mit Bergblick" class="rounded-lg shadow-md">
+                    <img src="https://a0.muscache.com/im/pictures/miso/Hosting-46182771/original/f33c99bd-3f3e-4e17-95c3-657565bb7014.jpeg?im_w=720" alt="Wohnung Panoramablick - Essbereich" class="rounded-lg shadow-md">
+                    <img src="https://a0.muscache.com/im/pictures/miso/Hosting-46182771/original/d3294b18-860e-4a3b-ac89-593697d2a142.jpeg?im_w=720" alt="Ausblick Melchsee-Frutt - Balkon bei Nacht" class="rounded-lg shadow-md">
+                    <img src="https://a0.muscache.com/im/pictures/miso/Hosting-46182771/original/f33c99bd-3f3e-4e17-95c3-657565bb7014.jpeg?im_w=720" alt="Wohnung Panoramablick - Badezimmer" class="rounded-lg shadow-md">
+                    <img src="https://a0.muscache.com/im/pictures/miso/Hosting-46182771/original/d3294b18-860e-4a3b-ac89-593697d2a142.jpeg?im_w=720" alt="Ausblick Melchsee-Frutt - Skiraum" class="rounded-lg shadow-md">
+                </div>
             </div>
         </div>
-        <hr class="separator">
     </section>
 
     <!-- Preisliste Section -->
     <section id="prices" class="py-16 bg-gray-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold mb-8 text-center">Preise Wintersaison 2025/26</h2>
-            <p class="text-lg text-gray-600 mb-8 text-center">Unsere Preise verstehen sich exklusive <strong>Reinigung</strong> und <strong>Bettwäsche/Frottee</strong>. Die Endreinigung von CHF 350 sowie CHF 40 pro Person für Bettwäsche und Frottee kommen zusätzlich zu den Preisen hinzu.</p>
-            <table>
-                <tr>
-                    <th>Zeitraum</th>
-                    <th>Saison</th>
-                    <th>Wochenpreis</th>
-                    <th>Mindestaufenthalt</th>
-                </tr>
-                <tr>
-                    <td>13.12. – 20.12.2025</td>
-                    <td>Nebensaison</td>
-                    <td>CHF 3'000.–</td>
-                    <td>4 Nächte</td>
-                </tr>
-                <tr>
-                    <td>20.12. – 04.01.2026 🎄</td>
-                    <td>Hochsaison</td>
-                    <td>CHF 4'000.–</td>
-                    <td>7 Nächte</td>
-                </tr>
-                <tr>
-                    <td>04.01. – 31.01.2026</td>
-                    <td>Nebensaison</td>
-                    <td>CHF 3'000.–</td>
-                    <td>4 Nächte</td>
-                </tr>
-                <tr>
-                    <td>01.02. – 08.03.2026 🏂</td>
-                    <td>Hochsaison</td>
-                    <td>CHF 4'000.–</td>
-                    <td>7 Nächte</td>
-                </tr>
-                <tr>
-                    <td>09.03. – 03.04.2026</td>
-                    <td>Nebensaison</td>
-                    <td>CHF 3'000.–</td>
-                    <td>4 Nächte</td>
-                </tr>
-                <tr>
-                    <td>04.04. – 06.04.2026 🐣</td>
-                    <td>Hochsaison</td>
-                    <td>CHF 3'500.–</td>
-                    <td>4 Nächte</td>
-                </tr>
-            </table>
-            <p class="text-lg text-gray-600 mt-4 text-center"><strong>Hinweis:</strong> Freitag- und Samstagnächte unterliegen einem Zuschlag von CHF 50.– pro Nacht, der im Wochenpreis bereits eingerechnet ist.<br>
-            ✔ Buchung direkt über <a href="https://www.airbnb.ch/rooms/46182771">Airbnb</a> oder per <a href="mailto:panoramablick@example.com">E-Mail</a>.</p>
+            <div class="tile">
+                <h2 class="text-3xl font-bold mb-6 text-center">Preise Wintersaison 2025/26</h2>
+                <p class="text-lg text-gray-600 mb-6 text-center">Unsere Preise verstehen sich exklusive <strong>Reinigung</strong> und <strong>Bettwäsche/Frottee</strong>. Die Endreinigung von CHF 350 sowie CHF 40 pro Person für Bettwäsche und Frottee kommen zusätzlich zu den Preisen hinzu.</p>
+                <table>
+                    <tr>
+                        <th>Zeitraum</th>
+                        <th>Saison</th>
+                        <th>Wochenpreis</th>
+                        <th>Mindestaufenthalt</th>
+                    </tr>
+                    <tr>
+                        <td>13.12. – 20.12.2025</td>
+                        <td>Nebensaison</td>
+                        <td>CHF 3'000.–</td>
+                        <td>4 Nächte</td>
+                    </tr>
+                    <tr>
+                        <td>20.12. – 04.01.2026 🎄</td>
+                        <td>Hochsaison</td>
+                        <td>CHF 4'000.–</td>
+                        <td>7 Nächte</td>
+                    </tr>
+                    <tr>
+                        <td>04.01. – 31.01.2026</td>
+                        <td>Nebensaison</td>
+                        <td>CHF 3'000.–</td>
+                        <td>4 Nächte</td>
+                    </tr>
+                    <tr>
+                        <td>01.02. – 08.03.2026 🏂</td>
+                        <td>Hochsaison</td>
+                        <td>CHF 4'000.–</td>
+                        <td>7 Nächte</td>
+                    </tr>
+                    <tr>
+                        <td>09.03. – 03.04.2026</td>
+                        <td>Nebensaison</td>
+                        <td>CHF 3'000.–</td>
+                        <td>4 Nächte</td>
+                    </tr>
+                    <tr>
+                        <td>04.04. – 06.04.2026 🐣</td>
+                        <td>Hochsaison</td>
+                        <td>CHF 3'500.–</td>
+                        <td>4 Nächte</td>
+                    </tr>
+                </table>
+                <p class="text-lg text-gray-600 mt-4 text-center"><strong>Hinweis:</strong> Freitag- und Samstagnächte unterliegen einem Zuschlag von CHF 50.– pro Nacht, der im Wochenpreis bereits eingerechnet ist.<br>✔ Buchung direkt über <a href="https://www.airbnb.ch/rooms/46182771">Airbnb</a> oder per <a href="mailto:panoramablick@example.com">E-Mail</a>.</p>
+            </div>
         </div>
-        <hr class="separator">
     </section>
 
     <!-- Gondelbahn Section -->
-    <section id="gondelbahn" class="py-16 bg-white">
+    <section id="gondelbahn" class="py-16 bg-gray-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold mb-8 text-center">Öffnungszeiten Wintersaison 2025/26</h2>
-            <h3 class="text-xl font-semibold mb-4 text-center">Anlagen (13. Dezember 2025 bis 6. April 2026)</h3>
-            <p class="text-lg text-gray-600 mb-4 text-center">Für Infos zu den offenen Anlagen klicken Sie <a href="https://www.melchsee-frutt.ch/winter/home-info/betriebszeiten-winter/" target="_blank" class="text-blue-600 hover:underline">hier</a>.</p>
-            <h4 class="text-lg font-semibold mb-2 text-center">Gondelbahn Stöckalp – Melchsee-Frutt</h4>
-            <p class="text-lg text-gray-600 mb-4 text-center">
-                Montag bis Donnerstag: 08:25 – 17:30 Uhr<br>
-                Freitag: 08:25 – 17:30 / 19:00 – 20:00*, Nachtfahrt um 21:15 Uhr<br>
-                Samstag: 08:00 – 17:30 / 19:00 – 20:00*, Nachtfahrt um 21:15 Uhr<br>
-                Sonntag, allg. Feiertage: 08:00 – 17:30 Uhr<br>
-                *Nachtschlitteln (Nachtschlittelsaison)<br>
-                Freitag, Samstag: 19:00 – 21:30 Uhr
-            </p>
-            <p class="text-lg text-gray-600 mb-4 text-center"></p>
-            <h4 class="text-lg font-semibold mb-2 text-center">Preise</h4>
-            <table>
-                <tr>
-                    <th></th>
-                    <th>Erwachsene ab 16 Jahre</th>
-                    <th>Halbtax und GA</th>
-                    <th>Kinder 6 bis 15.99 Jahre</th>
-                </tr>
-                <tr>
-                    <td>Einfache Fahrt</td>
-                    <td>CHF 28.00</td>
-                    <td>CHF 14.00</td>
-                    <td>CHF 14.00</td>
-                </tr>
-                <tr>
-                    <td>Hin- und Rückfahrt</td>
-                    <td>CHF 43.00</td>
-                    <td>CHF 21.50</td>
-                    <td>CHF 21.50</td>
-                </tr>
-            </table>
+            <div class="tile">
+                <h2 class="text-3xl font-bold mb-6 text-center">Öffnungszeiten Wintersaison 2025/26</h2>
+                <h3 class="text-2xl font-semibold mb-4 text-center">Anlagen (13. Dezember 2025 bis 6. April 2026)</h3>
+                <p class="text-lg text-gray-600 mb-4 text-center">Für Infos zu den offenen Anlagen klicken Sie <a href="https://www.melchsee-frutt.ch/winter/home-info/betriebszeiten-winter/" target="_blank" class="text-blue-600 hover:underline">hier</a>.</p>
+            </div>
+            <div class="tile">
+                <h3 class="text-2xl font-semibold mb-4 text-center">Gondelbahn Stöckalp – Melchsee-Frutt</h3>
+                <p class="text-lg text-gray-600 mb-4 text-center">
+                    Montag bis Donnerstag: 08:25 – 17:30 Uhr<br>
+                    Freitag: 08:25 – 17:30 / 19:00 – 20:00*, Nachtfahrt um 21:15 Uhr<br>
+                    Samstag: 08:00 – 17:30 / 19:00 – 20:00*, Nachtfahrt um 21:15 Uhr<br>
+                    Sonntag, allg. Feiertage: 08:00 – 17:30 Uhr<br>
+                    *Nachtschlitteln (Nachtschlittelsaison)<br>
+                    Freitag, Samstag: 19:00 – 21:30 Uhr
+                </p>
+            </div>
+            <div class="tile">
+                <h3 class="text-2xl font-semibold mb-4 text-center">Preise</h3>
+                <table>
+                    <tr>
+                        <th></th>
+                        <th>Erwachsene ab 16 Jahre</th>
+                        <th>Halbtax und GA</th>
+                        <th>Kinder 6 bis 15.99 Jahre</th>
+                    </tr>
+                    <tr>
+                        <td>Einfache Fahrt</td>
+                        <td>CHF 28.00</td>
+                        <td>CHF 14.00</td>
+                        <td>CHF 14.00</td>
+                    </tr>
+                    <tr>
+                        <td>Hin- und Rückfahrt</td>
+                        <td>CHF 43.00</td>
+                        <td>CHF 21.50</td>
+                        <td>CHF 21.50</td>
+                    </tr>
+                </table>
+            </div>
         </div>
-        <hr class="separator">
     </section>
 
     <!-- Kontakt Section -->
     <section id="kontakt" class="py-16 bg-gray-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold mb-8 text-center">Kontakt</h2>
-            <p class="text-lg text-gray-600 mb-8 text-center">
-                Hast du Fragen oder möchtest du mehr über unsere Ferienwohnung Panoramablick erfahren? Schreib uns gerne – wir freuen uns darauf, von dir zu hören!
-            </p>
-            <div class="text-center text-gray-600">
-                <p><strong>Panoramablick Melchsee-Frutt</strong></p>
-                <p>Frutt 9, 6068 Melchsee-Frutt</p>
-                <p>E-Mail: toogood@engelberger.law</p>
-                <p>Kontakt: Anna Toogood</p>
+            <div class="tile">
+                <h2 class="text-3xl font-bold mb-6 text-center">Kontakt</h2>
+                <p class="text-lg text-gray-600 mb-6 text-center">Hast du Fragen oder möchtest du mehr über unsere Ferienwohnung Panoramablick erfahren? Schreib uns gerne – wir freuen uns darauf, von dir zu hören!</p>
+                <div class="text-center text-gray-600">
+                    <p><strong>Panoramablick Melchsee-Frutt</strong></p>
+                    <p>Frutt 9, 6068 Melchsee-Frutt</p>
+                    <p>E-Mail: toogood@engelberger.law</p>
+                    <p>Kontakt: Anna Toogood</p>
+                </div>
+                <div class="mt-6 text-center">
+                    <a href="mailto:toogood@engelberger.law" class="bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700">E-Mail senden</a>
+                </div>
             </div>
-            <div class="mt-8 text-center">
-                <a href="mailto:toogood@engelberger.law" class="bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700">E-Mail senden</a>
-            </div>
-            <h3 class="text-2xl font-bold mt-16 text-center">Anfrageformular</h3>
-            <div class="mt-12 max-w-lg mx-auto contact-form">
-                <form>
-                    <input type="text" placeholder="Vorname" required>
-                    <input type="text" placeholder="Nachname" required>
-                    <input type="email" placeholder="E-Mail-Adresse" required>
-                    <input type="tel" placeholder="Telefonnummer" required>
-                    <textarea placeholder="Deine Nachricht" rows="4" required></textarea>
-                    <button type="submit">Anfrage senden</button>
-                </form>
+            <div class="tile">
+                <h3 class="text-2xl font-bold mt-6 text-center">Anfrageformular</h3>
+                <div class="mt-6 max-w-lg mx-auto contact-form">
+                    <form>
+                        <input type="text" placeholder="Vorname" required>
+                        <input type="text" placeholder="Nachname" required>
+                        <input type="email" placeholder="E-Mail-Adresse" required>
+                        <input type="tel" placeholder="Telefonnummer" required>
+                        <textarea placeholder="Deine Nachricht" rows="4" required></textarea>
+                        <button type="submit">Anfrage senden</button>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
@@ -387,14 +413,14 @@
     <!-- Footer -->
     <footer class="bg-gray-800 text-white py-8">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div class="footer-column">
                     <h3 class="text-lg font-semibold mb-4">Panoramablick Melchsee-Frutt</h3>
                     <p>Frutt 9, 6068 Melchsee-Frutt</p>
                     <p>E-Mail: toogood@engelberger.law</p>
                     <p>Kontakt: Anna Toogood</p>
                 </div>
-                <div>
+                <div class="footer-column">
                     <h3 class="text-lg font-semibold mb-4">Links</h3>
                     <ul class="space-y-2">
                         <li><a href="#" class="hover:underline">Impressum</a></li>
@@ -402,7 +428,7 @@
                         <li><a href="#" class="hover:underline">AGB</a></li>
                     </ul>
                 </div>
-                <div>
+                <div class="footer-column">
                 </div>
             </div>
         </div>
