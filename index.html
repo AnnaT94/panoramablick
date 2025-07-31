@@ -40,7 +40,7 @@
             width: 12.5%; /* 1/8 des Bildschirms */
             bottom: 0;
             background-color: #1e3a8a;
-            border: 1px solid #1e3a8a;
+            border: 1px solid #e5e7eb;
             border-radius: 0;
             box-shadow: -4px 4px 6px rgba(0, 0, 0, 0.1);
             z-index: 1000;
@@ -168,6 +168,22 @@
         .footer-column {
             text-align: center;
         }
+        .gallery {
+            display: flex;
+            overflow-x: auto;
+            gap: 1rem;
+            padding: 1rem 0;
+            -webkit-overflow-scrolling: touch;
+            scroll-behavior: smooth;
+        }
+        .gallery img {
+            width: 48%; /* Ca. 50% für 2 Bilder nebeneinander, mit Gap angepasst */
+            height: auto;
+            object-fit: cover;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            flex-shrink: 0;
+        }
     </style>
 </head>
 <body class="bg-gray-100">
@@ -195,7 +211,7 @@
     <!-- Logo Section -->
     <section class="py-2 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <img src="https://www.lav.ch/application/files/8417/5395/1772/Bild1.png" alt="Panoramablick Melchsee-Frutt Logo" class="h-56 mx-auto">
+            <img src="https://www.lav.ch/application/files/8417/5395/1772/Bild1.png" alt="Panoramablick Melchsee-Frutt Logo" class="h-46 mx-auto">
         </div>
     </section>
 
@@ -225,7 +241,7 @@
             </div>
             <div class="tile">
                 <h3 class="text-2xl font-semibold mb-4 text-center">Bilder</h3>
-                <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <div class="gallery">
                     <img src="https://a0.muscache.com/im/pictures/miso/Hosting-46182771/original/f33c99bd-3f3e-4e17-95c3-657565bb7014.jpeg?im_w=720" alt="Wohnung Panoramablick - Gemütliches Wohnzimmer mit Blick auf die Berge" class="rounded-lg shadow-md">
                     <img src="https://a0.muscache.com/im/pictures/miso/Hosting-46182771/original/d3294b18-860e-4a3b-ac89-593697d2a142.jpeg?im_w=720" alt="Ausblick Melchsee-Frutt - Panoramablick vom Balkon" class="rounded-lg shadow-md">
                     <img src="https://a0.muscache.com/im/pictures/miso/Hosting-46182771/original/f33c99bd-3f3e-4e17-95c3-657565bb7014.jpeg?im_w=720" alt="Wohnung Panoramablick - Moderne Küche" class="rounded-lg shadow-md">
