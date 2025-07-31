@@ -11,7 +11,7 @@
             font-family: 'Aptos', sans-serif;
         }
         .nav-link, h2, h3, h4 {
-            color: #1e3a8a; /* Dunkles Blau */
+            color: #1e3a8a;
         }
         .menu-toggle {
             display: block;
@@ -20,7 +20,7 @@
             right: 20px;
             width: 40px;
             height: 40px;
-            background-color: #1e3a8a; /* Blau wie im Logo */
+            background-color: #1e3a8a;
             color: white;
             border-radius: 5px;
             display: flex;
@@ -30,28 +30,31 @@
             z-index: 1001;
         }
         .menu-toggle:hover {
-            background-color: #163172; /* Dunkleres Blau beim Hover */
+            background-color: #163172;
         }
         .dropdown {
             display: none;
             position: fixed;
             top: 70px;
-            right: 20px;
-            background-color: #1e3a8a; /* Blau wie im Logo */
+            left: 0;
+            right: 0;
+            background-color: #1e3a8a;
             border: 1px solid #e5e7eb;
-            border-radius: 5px;
+            border-radius: 0;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             z-index: 1000;
-            padding: 10px;
+            padding: 20px 0;
+            text-align: center;
         }
         .dropdown a {
-            display: block;
-            padding: 8px 16px;
+            display: inline-block;
+            padding: 15px 30px;
             color: white;
             text-decoration: none;
+            font-size: 1.5rem; /* Vergrößerte Schrift */
         }
         .dropdown a:hover {
-            background-color: #163172; /* Dunkleres Blau beim Hover */
+            background-color: #163172;
         }
         .book-button {
             position: fixed;
@@ -59,7 +62,7 @@
             right: 20px;
             width: 60px;
             height: 60px;
-            background-color: #1e3a8a; /* Blau wie im Logo */
+            background-color: #1e3a8a;
             color: white;
             border-radius: 50%;
             display: flex;
@@ -72,7 +75,7 @@
             flex-direction: column;
         }
         .book-button:hover {
-            background-color: #163172; /* Dunkleres Blau beim Hover */
+            background-color: #163172;
         }
         table {
             width: 70%;
@@ -202,9 +205,9 @@
                 </ul>
             </div>
             <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-                <img src="https://a0.muscache.com/im/pictures/miso/Hosting-46182771/original/f33c99bd-3f3e-4e17-95c3-657565bb7014.jpeg?im_w=720">
-                <img src="https://a0.muscache.com/im/pictures/miso/Hosting-46182771/original/d3294b18-860e-4a3b-ac89-593697d2a142.jpeg?im_w=720">
-                <img src="https://a0.muscache.com/im/pictures/miso/Hosting-46182771/original/f33c99bd-3f3e-4e17-95c3-657565bb7014.jpeg?im_w=720">
+                <img src="https://a0.muscache.com/im/pictures/miso/Hosting-46182771/original/f33c99bd-3f3e-4e17-95c3-657565bb7014.jpeg?im_w=720" alt="Wohnung Panoramablick - Gemütliches Wohnzimmer mit Blick auf die Berge" class="rounded-lg shadow-md">
+                <img src="https://a0.muscache.com/im/pictures/miso/Hosting-46182771/original/d3294b18-860e-4a3b-ac89-593697d2a142.jpeg?im_w=720" alt="Ausblick Melchsee-Frutt - Panoramablick vom Balkon" class="rounded-lg shadow-md">
+                <img src="https://a0.muscache.com/im/pictures/miso/Hosting-46182771/original/f33c99bd-3f3e-4e17-95c3-657565bb7014.jpeg?im_w=720" alt="Wohnung Panoramablick - Moderne Küche" class="rounded-lg shadow-md">
                 <img src="https://a0.muscache.com/im/pictures/miso/Hosting-46182771/original/d3294b18-860e-4a3b-ac89-593697d2a142.jpeg?im_w=720" alt="Ausblick Melchsee-Frutt - Schlafzimmer mit Bergblick" class="rounded-lg shadow-md">
                 <img src="https://a0.muscache.com/im/pictures/miso/Hosting-46182771/original/f33c99bd-3f3e-4e17-95c3-657565bb7014.jpeg?im_w=720" alt="Wohnung Panoramablick - Essbereich" class="rounded-lg shadow-md">
                 <img src="https://a0.muscache.com/im/pictures/miso/Hosting-46182771/original/d3294b18-860e-4a3b-ac89-593697d2a142.jpeg?im_w=720" alt="Ausblick Melchsee-Frutt - Balkon bei Nacht" class="rounded-lg shadow-md">
