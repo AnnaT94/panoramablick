@@ -23,6 +23,15 @@
             background: url('https://www.lav.ch/application/files/1117/5397/2435/4.jpeg') no-repeat center/cover;
             z-index: -1;
         }
+        .hero-logo {
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 10;
+            width: 300px; /* Anpassbare Größe des Logos */
+            height: auto;
+        }
         .content {
             position: relative;
             z-index: 1;
@@ -296,7 +305,9 @@
     </style>
 </head>
 <body>
-    <div class="hero"></div>
+    <div class="hero">
+        <img src="https://www.lav.ch/application/files/8417/5395/1772/Bild1.png" alt="Panoramablick Melchsee-Frutt Logo" class="hero-logo">
+    </div>
     <div class="content">
         <!-- Navigation -->
         <nav class="bg-white shadow-md sticky top-0 z-50">
@@ -319,12 +330,12 @@
             </div>
         </nav>
 
-        <!-- Logo Section -->
-        <section class="py-2 bg-white">
+        <!-- Logo Section (entfernt, da es jetzt im Hero ist) -->
+        <!-- <section class="py-2 bg-white">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                 <img src="https://www.lav.ch/application/files/8417/5395/1772/Bild1.png" alt="Panoramablick Melchsee-Frutt Logo" class="h-45 mx-auto">
             </div>
-        </section>
+        </section> -->
 
         <!-- Wohnung Section -->
         <section id="wohnung" class="bg-gray-100" style="background: none;">
@@ -476,7 +487,7 @@
         </section>
 
         <!-- Kontakt Section -->
-        <section id="kontakt" class="bg-gray-100" style="background: url('https://tb-photo.ch/media/images/Art-Galerie/Melchsee-Frutt/_2560xAUTO_crop_center-center_85_none/629489/Melchsee-Frutt_Nacht-2.jpeg') no-repeat center/cover; padding: 40px 0;">
+        <section id="kontakt" class="bg-gray-100" style="background: none; padding: 40px 0;">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="tile">
                     <h2 class="text-3xl font-bold mb-6 text-center">Unverbindliche Anfrage</h2>
