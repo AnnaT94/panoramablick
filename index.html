@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ferienwohnung Frutt-Panoramablick</title>
+    <title>Panoramablick Melchsee-Frutt</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="icon" type="image/x-icon" href="https://www.lav.ch/application/files/3017/5395/4679/Bild2.png">
     <style>
@@ -170,20 +170,17 @@
             text-align: left;
         }
         .gallery {
-            display: flex;
-            overflow-x: auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
             gap: 1rem;
             padding: 1rem 0;
-            -webkit-overflow-scrolling: touch;
-            scroll-behavior: smooth;
         }
         .gallery img {
-            width: 48%; /* Ca. 50% für 2 Bilder nebeneinander, mit Gap angepasst */
+            width: 100%;
             height: auto;
             object-fit: cover;
             border-radius: 0.5rem;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            flex-shrink: 0;
         }
         .equipment-item {
             display: flex;
@@ -230,12 +227,12 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center justify-center flex-col">
         </div>
     </section>
-<p></p>
+
     <!-- Wohnung Section -->
     <section id="wohnung" class="bg-gray-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="tile">
-                <h2 class="text-3xl font-bold mb-12 text-center" style="font-family: 'Harlow Solid Italic', cursive;">Herzlich willkommen auf der Melchsee-Frutt</h2>
+                <h2 class="text-3xl font-bold mb-6 text-center" style="font-family: 'Harlow Solid Italic', cursive;">Herzlich willkommen auf der Melchsee-Frutt</h2>
                 <p class="text-lg text-gray-600 mb-6 text-center">Ihre Auszeit beginnt hier, an einem Ort zum Verweilen.</p>
                 <p class="text-lg text-gray-600 mb-6 text-center">Ob als Paar, Familie oder Naturliebhaber – in unserer gemütlichen Ferienwohnung erwartet Sie Ruhe, Aussicht und echtes Berggefühl auf über 1900 Metern.</p>
             </div>
@@ -256,14 +253,14 @@
             <div class="tile">
                 <h3 class="text-2xl font-semibold mb-4 text-center">Bildergalerie</h3>
                 <div class="gallery">
-                    <img src="https://a0.muscache.com/im/pictures/miso/Hosting-46182771/original/f33c99bd-3f3e-4e17-95c3-657565bb7014.jpeg?im_w=720" alt="Wohnung Panoramablick - Gemütliches Wohnzimmer mit Blick auf die Berge" class="rounded-lg shadow-md">
-                    <img src="https://a0.muscache.com/im/pictures/miso/Hosting-46182771/original/d3294b18-860e-4a3b-ac89-593697d2a142.jpeg?im_w=720" alt="Ausblick Melchsee-Frutt - Panoramablick vom Balkon" class="rounded-lg shadow-md">
-                    <img src="https://a0.muscache.com/im/pictures/miso/Hosting-46182771/original/f33c99bd-3f3e-4e17-95c3-657565bb7014.jpeg?im_w=720" alt="Wohnung Panoramablick - Moderne Küche" class="rounded-lg shadow-md">
-                    <img src="https://a0.muscache.com/im/pictures/miso/Hosting-46182771/original/d3294b18-860e-4a3b-ac89-593697d2a142.jpeg?im_w=720" alt="Ausblick Melchsee-Frutt - Schlafzimmer mit Bergblick" class="rounded-lg shadow-md">
-                    <img src="https://a0.muscache.com/im/pictures/miso/Hosting-46182771/original/f33c99bd-3f3e-4e17-95c3-657565bb7014.jpeg?im_w=720" alt="Wohnung Panoramablick - Essbereich" class="rounded-lg shadow-md">
-                    <img src="https://a0.muscache.com/im/pictures/miso/Hosting-46182771/original/d3294b18-860e-4a3b-ac89-593697d2a142.jpeg?im_w=720" alt="Ausblick Melchsee-Frutt - Balkon bei Nacht" class="rounded-lg shadow-md">
-                    <img src="https://a0.muscache.com/im/pictures/miso/Hosting-46182771/original/f33c99bd-3f3e-4e17-95c3-657565bb7014.jpeg?im_w=720" alt="Wohnung Panoramablick - Badezimmer" class="rounded-lg shadow-md">
-                    <img src="https://a0.muscache.com/im/pictures/miso/Hosting-46182771/original/d3294b18-860e-4a3b-ac89-593697d2a142.jpeg?im_w=720" alt="Ausblick Melchsee-Frutt - Skiraum" class="rounded-lg shadow-md">
+                    <img src="https://www.lav.ch/application/files/4217/5396/3338/10.jpeg" alt="Wohnung Panoramablick - Bild 10" style="grid-row: span 2; grid-column: span 1;">
+                    <img src="https://www.lav.ch/application/files/1517/5396/3337/8.jpeg" alt="Wohnung Panoramablick - Bild 8" style="grid-row: span 1; grid-column: span 1;">
+                    <img src="https://www.lav.ch/application/files/4417/5396/3336/7.jpeg" alt="Wohnung Panoramablick - Bild 7" style="grid-row: span 1; grid-column: span 1;">
+                    <img src="https://www.lav.ch/application/files/4517/5396/3335/6.jpeg" alt="Wohnung Panoramablick - Bild 6" style="grid-row: span 2; grid-column: span 1;">
+                    <img src="https://www.lav.ch/application/files/8917/5396/3335/5.jpeg" alt="Wohnung Panoramablick - Bild 5" style="grid-row: span 1; grid-column: span 2;">
+                    <img src="https://www.lav.ch/application/files/6917/5396/3334/4.jpeg" alt="Wohnung Panoramablick - Bild 4" style="grid-row: span 1; grid-column: span 1;">
+                    <img src="https://www.lav.ch/application/files/8817/5396/3333/3.jpeg" alt="Wohnung Panoramablick - Bild 3" style="grid-row: span 1; grid-column: span 1;">
+                    <img src="https://www.lav.ch/application/files/8817/5396/3332/2.jpeg" alt="Wohnung Panoramablick - Bild 2" style="grid-row: span 1; grid-column: span 1;">
                 </div>
                 <!-- Button for Hausregeln -->
                 <button id="house-rules-btn" class="book-button mt-4" style="position: relative; bottom: auto; right: auto;" aria-label="Hausregeln anzeigen">
@@ -275,7 +272,59 @@
     </section>
 
     <!-- Preisliste Section -->
-   html
+    <section id="prices" class="bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="tile">
+                <h2 class="text-3xl font-bold mb-6 text-center">Preise Wintersaison 2025/26</h2>
+                <p class="text-lg text-gray-600 mb-6 text-center">Unsere Preise verstehen sich exklusive <strong>Reinigung</strong> und <strong>Bettwäsche/Frottee</strong>. Die Endreinigung von CHF 350 sowie CHF 40 pro Person für Bettwäsche und Frottee kommen zusätzlich zu den Preisen hinzu.</p>
+                <table>
+                    <tr>
+                        <th>Zeitraum</th>
+                        <th>Saison</th>
+                        <th>Wochenpreis</th>
+                        <th>Mindestaufenthalt</th>
+                    </tr>
+                    <tr>
+                        <td>13.12. – 20.12.2025</td>
+                        <td>Nebensaison</td>
+                        <td>CHF 3'000.–</td>
+                        <td>4 Nächte</td>
+                    </tr>
+                    <tr>
+                        <td>20.12. – 04.01.2026 🎄</td>
+                        <td>Hochsaison</td>
+                        <td>CHF 4'000.–</td>
+                        <td>7 Nächte</td>
+                    </tr>
+                    <tr>
+                        <td>04.01. – 31.01.2026</td>
+                        <td>Nebensaison</td>
+                        <td>CHF 3'000.–</td>
+                        <td>4 Nächte</td>
+                    </tr>
+                    <tr>
+                        <td>01.02. – 08.03.2026 🏂</td>
+                        <td>Hochsaison</td>
+                        <td>CHF 4'000.–</td>
+                        <td>7 Nächte</td>
+                    </tr>
+                    <tr>
+                        <td>09.03. – 03.04.2026</td>
+                        <td>Nebensaison</td>
+                        <td>CHF 3'000.–</td>
+                        <td>4 Nächte</td>
+                    </tr>
+                    <tr>
+                        <td>04.04. – 06.04.2026 🐣</td>
+                        <td>Hochsaison</td>
+                        <td>CHF 3'500.–</td>
+                        <td>4 Nächte</td>
+                    </tr>
+                </table>
+                <p class="text-lg text-gray-600 mt-4 text-center"><strong>Hinweis:</strong> Freitag- und Samstagnächte unterliegen einem Zuschlag von CHF 50.– pro Nacht, der im Wochenpreis bereits eingerechnet ist.<br>✔ Buchung direkt über <a href="https://www.airbnb.ch/rooms/46182771">Airbnb</a> oder per <a href="mailto:panoramablick@example.com">E-Mail</a>.</p>
+            </div>
+        </div>
+    </section>
 
     <!-- Gondelbahn Section -->
     <section id="gondelbahn" class="bg-gray-100">
