@@ -7,11 +7,12 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="icon" type="image/x-icon" href="https://www.lav.ch/application/files/3017/5395/4679/Bild2.png">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Harlow+Solid+Italic&family=Open+Sans:wght@400;600&family=Roboto:wght@400;500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Broadway&family=Open+Sans:wght@400;600&family=Roboto:wght@400;500&display=swap');
         body {
             margin: 0;
             font-family: 'Open Sans', sans-serif;
             background: #f3f4f6;
+            overflow-x: hidden;
         }
         .hero {
             position: fixed;
@@ -21,16 +22,10 @@
             height: 100vh;
             background: url('https://tb-photo.ch/media/images/Art-Galerie/Melchsee-Frutt/_2560xAUTO_crop_center-center_85_none/629489/Melchsee-Frutt_Nacht-2.jpeg') no-repeat center/cover;
             z-index: -1;
+            transition: opacity 0.5s ease;
         }
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.3); /* Leichte Abdeckung für Sichtbarkeit */
-            z-index: 0;
+        .hero.scrolled {
+            opacity: 0.3; /* Leicht durchsichtig beim Scrollen */
         }
         .content {
             position: relative;
@@ -38,8 +33,15 @@
             padding-top: 100vh; /* Platz für das feste Hero-Bild */
             padding-bottom: 20px;
         }
+        .tile {
+            background-color: rgba(255, 255, 255, 0.7); /* Halbtransparente Hintergrundfarbe für Textfelder */
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
         h2, h3, h4 {
-            font-family: 'Harlow Solid Italic', cursive;
+            font-family: 'Broadway', cursive;
             color: #1e3a8a;
         }
         .equipment-item, footer {
@@ -96,8 +98,8 @@
             position: fixed;
             bottom: 20px;
             right: 20px;
-            width: 60px;
-            height: 60px;
+            width: 80px;
+            height: 80px;
             background-color: #1e3a8a;
             color: white;
             border-radius: 50%;
@@ -107,18 +109,16 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             z-index: 1000;
             text-decoration: none;
-            font-size: 12px;
+            font-size: 14px;
             flex-direction: column;
+            animation: float 2s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
         }
         .book-button:hover {
             background-color: #163172;
-        }
-        .tile {
-            background-color: white;
-            border-radius: 15px;
-            padding: 20px;
-            margin-bottom: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
         .section-divider {
             border-top: 2px solid #1e3a8a;
@@ -148,6 +148,8 @@
             margin-bottom: 1rem;
             border: 1px solid #e5e7eb;
             border-radius: 0.375rem;
+            background: rgba(255, 255, 255, 0.8);
+            color: #1e3a8a;
         }
         .contact-form button {
             background-color: #1e3a8a;
@@ -171,13 +173,14 @@
             z-index: 1000;
         }
         .modal-content {
-            background-color: white;
+            background-color: rgba(255, 255, 255, 0.8);
             margin: 15% auto;
             padding: 20px;
             border-radius: 5px;
             width: 70%;
             max-height: 70vh;
             overflow-y: auto;
+            color: #1e3a8a;
         }
         .modal-close {
             color: #aaa;
@@ -416,6 +419,12 @@
                         </tr>
                     </table>
                 </div>
+                <div class="tile">
+                    <video controls autoplay muted loop playsinline class="w-full h-auto rounded-lg shadow-md">
+                        <source src="https://www.lav.ch/application/files/1317/5396/6229/IMG_0141.MOV" type="video/mov">
+                        Dein Browser unterstützt das Video-Tag nicht.
+                    </video>
+                </div>
                 <div class="section-divider"></div>
             </div>
         </section>
@@ -487,8 +496,7 @@
                         </ul>
                     </div>
                     <div class="footer-column">
-                        <p>Panoramablick Melchsee-Frutt ...</p>
-                    </div>
+                                   </div>
                 </div>
             </div>
         </footer>
@@ -521,10 +529,13 @@
             });
 
             window.addEventListener('scroll', function() {
+                const hero = document.querySelector('.hero');
                 const bookButton = document.querySelector('.book-button');
                 if (window.scrollY > 100) {
+                    hero.classList.add('scrolled');
                     bookButton.style.display = 'flex';
                 } else {
+                    hero.classList.remove('scrolled');
                     bookButton.style.display = 'none';
                 }
             });
