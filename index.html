@@ -23,8 +23,9 @@
             z-index: 20;
             padding: 10px 0;
             display: flex;
-            justify-content: center;
+            justify-content: flex-start;
             align-items: center;
+            padding-left: 20px;
         }
         .logo-bar img {
             width: 300px;
@@ -61,8 +62,8 @@
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
         }
         .welcome-subtext {
-            font-size: 1.5rem;
-            line-height: 2rem;
+            font-size: 1.25rem;
+            line-height: 1.75rem;
             color: #000000;
             font-family: 'Roboto', sans-serif;
         }
@@ -360,7 +361,7 @@
                 <div class="tile">
                     <table>
                         <tr>
-                            <td style="vertical-align: top;"><span class="equipment-title">Ausstattung</span><br><span style="font-size: 0.875rem;">Entdecken Sie die Annehmlichkeiten unserer Wohnung.</span></td>
+                            <td style="vertical-align: top;"><span class="equipment-title"><strong>Ausstattung</strong></span><br><span style="font-size: 0.875rem;">Entdecken Sie die Annehmlichkeiten unserer Wohnung.</span></td>
                             <td>
                                 <div class="equipment-item">3.5-Zimmerwohnung für 1–6 Personen, ideal für jede Reisegruppe!</div>
                                 <div class="equipment-item">2 Schlafzimmer mit gemütlichen Doppelbetten plus zwei Schlafsofas im Wohnbereich.</div>
@@ -484,13 +485,6 @@
                         </tr>
                     </table>
                 </div>
-                <div class="tile">
-                    <h3 class="text-2xl font-semibold mb-4 text-center">Video</h3>
-                    <video controls style="width: 100%; max-height: 400px; border-radius: 0.5rem;">
-                        <source src="https://www.lav.ch/application/files/sample-video.mp4" type="video/mp4">
-                        Ihr Browser unterstützt das Video-Tag nicht.
-                    </video>
-                </div>
                 <div class="section-divider"></div>
             </div>
         </section>
@@ -561,56 +555,67 @@
         </a>
 
         <script>
-            document.getElementById('menu-toggle').addEventListener('click', function() {
+            document.addEventListener('DOMContentLoaded', function() {
+                const menuToggle = document.getElementById('menu-toggle');
                 const dropdown = document.getElementById('dropdown');
-                dropdown.style.display = (dropdown.style.display === 'block') ? 'none' : 'block';
-            });
 
-            document.getElementById('house-rules-btn').addEventListener('click', function() {
-                const modal = document.getElementById('house-rules-modal');
-                modal.style.display = 'block';
-            });
-
-            function closeModal() {
-                document.getElementById('house-rules-modal').style.display = 'none';
-            }
-
-            window.addEventListener('click', function(event) {
-                if (event.target == document.getElementById('house-rules-modal')) {
-                    document.getElementById('house-rules-modal').style.display = 'none';
-                }
-            });
-
-            window.addEventListener('scroll', function() {
-                const bookButton = document.querySelector('.book-button');
-                if (window.scrollY > 100) {
-                    bookButton.style.display = 'flex';
+                if (menuToggle && dropdown) {
+                    menuToggle.addEventListener('click', function() {
+                        dropdown.style.display = (dropdown.style.display === 'block') ? 'none' : 'block';
+                    });
                 } else {
-                    bookButton.style.display = 'none';
+                    console.error('Elemente #menu-toggle oder #dropdown nicht gefunden.');
                 }
-            });
 
-            // Bildergalerie Modal
-            const galleryImages = document.querySelectorAll('#gallery img');
-            const galleryModal = document.createElement('div');
-            galleryModal.className = 'gallery-modal';
-            galleryModal.innerHTML = '<span class="modal-close" onclick="this.parentElement.style.display=\'none\'">×</span><img>';
-            document.body.appendChild(galleryModal);
-
-            galleryImages.forEach(img => {
-                img.addEventListener('click', function() {
-                    galleryModal.querySelector('img').src = this.src;
-                    galleryModal.style.display = 'flex';
+                document.getElementById('house-rules-btn').addEventListener('click', function() {
+                    const modal = document.getElementById('house-rules-modal');
+                    if (modal) modal.style.display = 'block';
                 });
-            });
 
-            window.addEventListener('click', function(event) {
-                if (event.target.className === 'gallery-modal') {
-                    galleryModal.style.display = 'none';
+                function closeModal() {
+                    const modal = document.getElementById('house-rules-modal');
+                    if (modal) modal.style.display = 'none';
                 }
+
+                window.addEventListener('click', function(event) {
+                    const modal = document.getElementById('house-rules-modal');
+                    if (modal && event.target === modal) {
+                        modal.style.display = 'none';
+                    }
+                });
+
+                window.addEventListener('scroll', function() {
+                    const bookButton = document.querySelector('.book-button');
+                    if (bookButton) {
+                        if (window.scrollY > 100) {
+                            bookButton.style.display = 'flex';
+                        } else {
+                            bookButton.style.display = 'none';
+                        }
+                    }
+                });
+
+                // Bildergalerie Modal
+                const galleryImages = document.querySelectorAll('#gallery img');
+                const galleryModal = document.createElement('div');
+                galleryModal.className = 'gallery-modal';
+                galleryModal.innerHTML = '<span class="modal-close" onclick="this.parentElement.style.display=\'none\'">×</span><img>';
+                document.body.appendChild(galleryModal);
+
+                galleryImages.forEach(img => {
+                    img.addEventListener('click', function() {
+                        galleryModal.querySelector('img').src = this.src;
+                        galleryModal.style.display = 'flex';
+                    });
+                });
+
+                window.addEventListener('click', function(event) {
+                    if (event.target.className === 'gallery-modal') {
+                        galleryModal.style.display = 'none';
+                    }
+                });
             });
         </script>
     </div>
 </body>
 </html>
-Bitte absofert diesen Code weiterbearbeiten. ich gebe dir gleich die ANpassungswünsche bekannt, vorerst bitte noch nichts machen
