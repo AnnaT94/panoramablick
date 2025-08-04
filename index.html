@@ -98,7 +98,7 @@
         .menu-toggle {
             display: block;
             position: fixed;
-            top: 80px;
+            top: 10px;
             right: 20px;
             width: 40px;
             height: 40px;
@@ -111,16 +111,20 @@
             cursor: pointer;
             z-index: 1001;
         }
+        .menu-toggle img {
+            width: 30px;
+            height: 30px;
+        }
         .menu-toggle:hover {
             background-color: #163172;
         }
         .dropdown {
             display: none;
             position: fixed;
-            top: 130px;
+            top: 60px;
             right: 0;
             width: 12.5%;
-            height: calc(100vh - 130px);
+            height: calc(100vh - 60px);
             background-color: #1e3a8a;
             border: 1px solid #1e3a8a;
             border-radius: 0;
@@ -337,7 +341,7 @@
                     </div>
                     <div class="relative">
                         <div class="menu-toggle" id="menu-toggle">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                            <img src="https://www.lav.ch/application/files/8417/5395/1772/Bild1.png" alt="Menu Icon">
                         </div>
                         <div class="dropdown" id="dropdown">
                             <a href="#bildergalerie">Bildergalerie</a>
