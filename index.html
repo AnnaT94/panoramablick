@@ -25,25 +25,23 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 60px; /* Feste Höhe für die Logo-Leiste */
+            height: 60px;
         }
         .logo-bar img {
             width: 300px;
             height: auto;
         }
         .hero {
-            position: fixed;
-            top: 60px;
-            left: 0;
+            position: relative;
             width: 100%;
-            height: calc(100vh - 60px);
+            height: 100vh;
             background: url('https://www.lav.ch/application/files/1117/5397/2435/4.jpeg') no-repeat center/cover;
             z-index: -1;
         }
         .content {
             position: relative;
             z-index: 1;
-            padding-top: 60px; /* Platz für die Logo-Leiste */
+            padding-top: 100vh; /* Startet nach der vollen Höhe des Hintergrundbilds */
             padding-bottom: 20px;
         }
         .tile {
