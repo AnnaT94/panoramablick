@@ -20,12 +20,12 @@
             left: 0;
             width: 100%;
             background: rgba(255, 255, 255, 0.9);
-            z-index: 20;
-            padding: 2px 0;
+            z-index: 10;
+            padding: 1px 0;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 40px;
+            height: 35px;
         }
         .logo-bar img {
             width: 300px;
@@ -33,17 +33,23 @@
         }
         .hero {
             position: fixed;
-            top: 40px;
+            top: 35px;
             left: 0;
             width: 100%;
-            height: calc(100vh - 40px);
-            background: url('https://www.lav.ch/application/files/1117/5397/2435/4.jpeg') no-repeat center/cover;
+            height: calc(100vh - 35px);
+            background: url('https://www.lav.ch/application/files/1117/5397/2435/4.jpeg') no-repeat center/contain;
             z-index: -1;
+        }
+        .hero img {
+            display: none;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
         }
         .content {
             position: relative;
             z-index: 1;
-            padding-top: calc(100vh - 40px);
+            padding-top: calc(100vh - 35px);
             padding-bottom: 20px;
         }
         .tile {
@@ -99,27 +105,27 @@
         .menu-toggle {
             display: block;
             position: fixed;
-            top: -5px;
-            right: 40px;
-            width: 40px;
-            height: 40px;
+            top: 5px;
+            right: 60px;
+            width: 50px;
+            height: 50px;
             background-color: #1e3a8a;
             color: white;
-            border-radius: 5px;
-            border: 2px solid white;
+            border-radius: 8px;
+            border: 4px solid white;
             display: flex;
             align-items: center;
             justify-content: center;
             cursor: pointer;
-            z-index: 2000;
+            z-index: 5000;
         }
         .menu-toggle img {
-            width: 35px;
-            height: 35px;
+            width: 50px;
+            height: 50px;
         }
         .menu-toggle::after {
             content: "☰";
-            font-size: 24px;
+            font-size: 30px;
             color: white;
             display: none;
         }
@@ -133,17 +139,17 @@
             background-color: #163172;
         }
         .dropdown {
-            display: none;
+            display: block; /* Temporär für Debugging sichtbar */
             position: fixed;
-            top: 40px;
+            top: 35px;
             right: 0;
             width: 12.5%;
-            height: calc(100vh - 40px);
+            height: calc(100vh - 35px);
             background-color: #1e3a8a;
             border: 1px solid #1e3a8a;
             border-radius: 0;
             box-shadow: -4px 4px 6px rgba(0, 0, 0, 0.1);
-            z-index: 1999;
+            z-index: 4999;
             padding: 20px 0;
             text-align: center;
             overflow-y: auto;
@@ -345,7 +351,9 @@
     <div class="logo-bar">
         <img src="https://www.lav.ch/application/files/8417/5395/1772/Bild1.png" alt="Panoramablick Melchsee-Frutt Logo">
     </div>
-    <div class="hero"></div>
+    <div class="hero">
+        <img src="https://www.lav.ch/application/files/1117/5397/2435/4.jpeg" alt="Hero Image Fallback">
+    </div>
     <div class="content">
         <!-- Navigation -->
         <nav class="sticky top-0 z-50">
