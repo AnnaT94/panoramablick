@@ -22,43 +22,56 @@
             background-color: rgba(255, 255, 255, 0.9);
             z-index: 20;
             padding: 10px 0;
-            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
         .logo-bar img {
-            width: 300px; /* Anpassbare Größe des Logos */
+            width: 300px;
             height: auto;
         }
         .hero {
             position: fixed;
-            top: 60px; /* Platz für die Logo-Leiste */
+            top: 60px;
             left: 0;
             width: 100%;
-            height: calc(100vh - 60px); /* Anpassung für die Logo-Leiste */
+            height: calc(100vh - 60px);
             background: url('https://www.lav.ch/application/files/1117/5397/2435/4.jpeg') no-repeat center/cover;
             z-index: -1;
         }
         .content {
             position: relative;
             z-index: 1;
-            padding-top: calc(100vh - 60px + 20px); /* Anpassung für die Logo-Leiste und Padding */
+            padding-top: calc(100vh - 60px);
             padding-bottom: 20px;
         }
         .tile {
-            background-color: rgba(255, 255, 255, 0.7); /* Halbtransparente Hintergrundfarbe für Textfelder */
+            background-color: rgba(255, 255, 255, 0.7);
             border-radius: 15px;
             padding: 20px;
             margin-bottom: 20px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
-        .contact-tile {
-            background: rgba(0, 0, 0, 0.3); /* Transparenter für Hintergrundbild */
-            color: #ffffff;
+        .welcome-text {
+            font-size: 2rem;
+            line-height: 2.5rem;
+            font-weight: 700;
+            color: #1e3a8a;
+            font-family: 'Broadway', cursive;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        }
+        .welcome-subtext {
+            font-size: 1.5rem;
+            line-height: 2rem;
+            color: #000000;
+            font-family: 'Roboto', sans-serif;
+        }
+        .gondelbahn-tile {
+            background: rgba(255, 255, 255, 0.7);
             border-radius: 15px;
             padding: 20px;
             margin-bottom: 20px;
-        }
-        .contact-tile h2, .contact-tile h3, .contact-tile h4 {
-            color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
         h2, h3, h4 {
             font-family: 'Broadway', cursive;
@@ -72,13 +85,18 @@
         .equipment-item, footer {
             font-family: 'Roboto', sans-serif;
         }
+        .equipment-item::before {
+            content: "•";
+            margin-right: 0.5rem;
+            color: #1e3a8a;
+        }
         .nav-link {
             color: #1e3a8a;
         }
         .menu-toggle {
             display: block;
             position: fixed;
-            top: 80px; /* Anpassung für die Logo-Leiste */
+            top: 80px;
             right: 20px;
             width: 40px;
             height: 40px;
@@ -97,10 +115,10 @@
         .dropdown {
             display: none;
             position: fixed;
-            top: 130px; /* Anpassung für die Logo-Leiste */
+            top: 130px;
             right: 0;
-            width: 12.5%; /* 1/8 des Bildschirms */
-            bottom: 0;
+            width: 12.5%;
+            height: calc(100vh - 130px);
             background-color: #1e3a8a;
             border: 1px solid #1e3a8a;
             border-radius: 0;
@@ -108,13 +126,14 @@
             z-index: 1000;
             padding: 20px 0;
             text-align: center;
+            overflow-y: auto;
         }
         .dropdown a {
             display: block;
             padding: 20px;
             color: white;
             text-decoration: none;
-            font-size: 1.5rem; /* Anpassung für kleinere Breite */
+            font-size: 1.5rem;
         }
         .dropdown a:hover {
             background-color: #163172;
@@ -146,8 +165,8 @@
             background-color: #163172;
         }
         .section-divider {
-            border-top: 3px solid #1e3a8a; /* Dicker und farbiger für bessere Abgrenzung */
-            margin: 30px 0; /* Mehr Abstand */
+            border-top: 3px solid #000000;
+            margin: 30px 0;
         }
         table {
             width: 100%;
@@ -237,10 +256,10 @@
             text-align: center;
         }
         .footer-column:nth-child(2) {
-            text-align: right; /* Links rechtsbündig */
+            text-align: right;
         }
         .footer-column:nth-child(3) {
-            display: none; /* Entfernt "Panoramablick Melchsee-Frutt ..." */
+            display: none;
         }
         .gallery {
             display: flex;
@@ -251,22 +270,16 @@
             scroll-behavior: smooth;
         }
         .gallery img {
-            width: 60%; /* Größer auf 60% */
+            width: 60%;
             height: auto;
             object-fit: cover;
             border-radius: 0.5rem;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             flex-shrink: 0;
-            cursor: pointer; /* Zeigt an, dass das Bild anklickbar ist */
+            cursor: pointer;
         }
         .equipment-item {
-            display: flex;
-            align-items: center;
             margin-bottom: 1rem;
-        }
-        .equipment-item::before {
-            content: "✨";
-            margin-right: 0.5rem;
         }
         .house-rules-button {
             display: block;
@@ -282,7 +295,6 @@
         .house-rules-button:hover {
             background-color: #163172;
         }
-        /* Modal für Bildergalerie */
         .gallery-modal {
             display: none;
             position: fixed;
@@ -316,7 +328,7 @@
     <div class="hero"></div>
     <div class="content">
         <!-- Navigation -->
-        <nav class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="sticky top-0 z-50">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="flex justify-between h-16 items-center">
                     <div class="flex items-center">
@@ -326,9 +338,10 @@
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
                         </div>
                         <div class="dropdown" id="dropdown">
-                            <a href="#wohnung">Wohnung</a>
+                            <a href="#bildergalerie">Bildergalerie</a>
                             <a href="#prices">Preise</a>
-                            <a href="#kontakt">Kontakt</a>
+                            <a href="#kontakt">Anfrage</a>
+                            <a href="#gondelbahn">Gondelbahn</a>
                             <a href="#">DE | EN</a>
                         </div>
                     </div>
@@ -340,8 +353,8 @@
         <section id="wohnung" class="bg-gray-100" style="background: none;">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="tile">
-                    <p class="text-lg mb-6 text-center">Herzlich willkommen auf der Melchsee-Frutt – Ihre Auszeit beginnt hier, an einem Ort zum Verweilen. 
-                        Ob als Paar, Familie oder Naturliebhaber – in unserer gemütlichen Ferienwohnung erwartet Sie Ruhe, Aussicht und echtes Berggefühl auf über 1900 Metern.</p>
+                    <p class="welcome-text mb-2 text-center">Herzlich willkommen auf der Melchsee-Frutt</p>
+                    <p class="welcome-subtext mb-6 text-center">Ihre Auszeit beginnt hier, an einem Ort zum Verweilen. Ob als Paar, Familie oder Naturliebhaber – in unserer gemütlichen Ferienwohnung erwartet Sie Ruhe, Aussicht und echtes Berggefühl auf über 1900 Metern.</p>
                 </div>
                 <div class="section-divider"></div>
                 <div class="tile">
@@ -359,7 +372,7 @@
                     </table>
                 </div>
                 <div class="section-divider"></div>
-                <div class="tile">
+                <div class="tile" id="bildergalerie">
                     <h3 class="text-2xl font-semibold mb-4 text-center">Bildergalerie</h3>
                     <div class="gallery" id="gallery">
                         <img src="https://www.lav.ch/application/files/4217/5396/3338/10.jpeg" alt="Wohnung Panoramablick - Bild 10">
@@ -371,7 +384,6 @@
                         <img src="https://www.lav.ch/application/files/8817/5396/3333/3.jpeg" alt="Wohnung Panoramablick - Bild 3">
                         <img src="https://www.lav.ch/application/files/8817/5396/3332/2.jpeg" alt="Wohnung Panoramablick - Bild 2">
                     </div>
-                    <!-- Button for Hausregeln -->
                     <button id="house-rules-btn" class="house-rules-button mt-4" aria-label="Hausregeln anzeigen">
                         Hausregeln
                     </button>
@@ -383,7 +395,7 @@
         <!-- Preisliste Section -->
         <section id="prices" class="bg-gray-100" style="background: none;">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="tile" style="background-color: #f9fafb;">
+                <div class="tile">
                     <h2 class="text-3xl font-bold mb-6 text-center">Preise Ferienwohnung Wintersaison 2025/26</h2>
                     <p class="text-lg mb-6 text-center">Unsere Preise verstehen sich <strong><u>exklusive</u></strong> <strong><u>Reinigung</u></strong> und <strong><u>Bettwäsche/Frottee</u></strong>. Die Endreinigung von CHF 350 sowie CHF 40 pro Person für Bettwäsche und Frottee kommen zusätzlich zu den Preisen hinzu.</p>
                     <table>
@@ -439,12 +451,9 @@
         <!-- Gondelbahn Section -->
         <section id="gondelbahn" class="bg-gray-100" style="background: none;">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="tile" style="background-color: #f9fafb;">
+                <div class="gondelbahn-tile">
                     <h2 class="text-3xl font-bold mb-6 text-center">Informationen Gondelbahn Stöckalp - Melchsee-Frutt Winter 2025/26</h2>
                     <h3 class="text-2xl font-semibold mb-4 text-center">Betriebszeiten 13. Dezember 2025 bis 6. April 2026</h3>
-                            </div>
-                <div class="tile" style="background-color: #f9fafb;">
-                    <h3 class="text-2xl font-semibold mb-4 text-center">Gondelbahn Stöckalp – Melchsee-Frutt</h3>
                     <p class="text-lg mb-4 text-center">
                         Montag bis Donnerstag: 08:25 – 17:30 Uhr<br>
                         Freitag: 08:25 – 17:30 / 19:00 – 20:00*, Nachtfahrt um 21:15 Uhr<br>
@@ -453,8 +462,6 @@
                         *Nachtschlitteln (Nachtschlittelsaison)<br>
                         Freitag, Samstag: 19:00 – 21:30 Uhr
                     </p>
-                </div>
-                <div class="tile" style="background-color: #f9fafb;">
                     <h3 class="text-2xl font-semibold mb-4 text-center">Preise</h3>
                     <table>
                         <tr>
@@ -477,9 +484,12 @@
                         </tr>
                     </table>
                 </div>
-                <!-- Platzhalter für Video (bitte konvertierte Version oder neue URL bereitstellen) -->
-                <div class="tile" style="background-color: #f9fafb;">
-                    <p>Video wird hier eingebettet, sobald es verfügbar ist (z. B. als MP4).</p>
+                <div class="tile">
+                    <h3 class="text-2xl font-semibold mb-4 text-center">Video</h3>
+                    <video controls style="width: 100%; max-height: 400px; border-radius: 0.5rem;">
+                        <source src="https://www.lav.ch/application/files/sample-video.mp4" type="video/mp4">
+                        Ihr Browser unterstützt das Video-Tag nicht.
+                    </video>
                 </div>
                 <div class="section-divider"></div>
             </div>
@@ -499,17 +509,6 @@
                             <textarea placeholder="Deine Nachricht" rows="4" required></textarea>
                             <button type="submit" class="bg-1e3a8a text-white px-6 py-3 rounded-full hover:bg-163172">Anfrage senden</button>
                         </form>
-                    </div>
-                </div>
-                <div class="section-divider" style="border-color: #ffffff;"></div>
-                <div class="tile contact-tile">
-                    <h2 class="text-3xl font-bold mb-6 text-center">Kontakt</h2>
-                    <p class="text-lg mb-6 text-center">Hast du Fragen oder möchtest du mehr über unsere Ferienwohnung Panoramablick erfahren? Schreib uns gerne – wir freuen uns darauf, von dir zu hören!</p>
-                    <div class="text-center">
-                        <p><strong>Panoramablick Melchsee-Frutt</strong></p>
-                        <p>Frutt 9, 6068 Melchsee-Frutt</p>
-                        <p>E-Mail: toogood@engelberger.law</p>
-                        <p>Kontakt: Anna Toogood</p>
                     </div>
                 </div>
             </div>
@@ -583,7 +582,6 @@
             });
 
             window.addEventListener('scroll', function() {
-                const hero = document.querySelector('.hero');
                 const bookButton = document.querySelector('.book-button');
                 if (window.scrollY > 100) {
                     bookButton.style.display = 'flex';
