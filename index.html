@@ -21,11 +21,11 @@
             width: 100%;
             background: rgba(255, 255, 255, 0.9);
             z-index: 20;
-            padding: 5px 0;
+            padding: 2px 0;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 50px;
+            height: 40px;
         }
         .logo-bar img {
             width: 300px;
@@ -33,17 +33,17 @@
         }
         .hero {
             position: fixed;
-            top: 50px;
+            top: 40px;
             left: 0;
             width: 100%;
-            height: calc(100vh - 50px);
+            height: calc(100vh - 40px);
             background: url('https://www.lav.ch/application/files/1117/5397/2435/4.jpeg') no-repeat center/cover;
             z-index: -1;
         }
         .content {
             position: relative;
             z-index: 1;
-            padding-top: calc(100vh - 50px);
+            padding-top: calc(100vh - 40px);
             padding-bottom: 20px;
         }
         .tile {
@@ -99,13 +99,14 @@
         .menu-toggle {
             display: block;
             position: fixed;
-            top: 0px;
-            right: 30px;
+            top: -5px;
+            right: 40px;
             width: 40px;
             height: 40px;
             background-color: #1e3a8a;
             color: white;
             border-radius: 5px;
+            border: 2px solid white;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -113,8 +114,20 @@
             z-index: 2000;
         }
         .menu-toggle img {
-            width: 30px;
-            height: 30px;
+            width: 35px;
+            height: 35px;
+        }
+        .menu-toggle::after {
+            content: "☰";
+            font-size: 24px;
+            color: white;
+            display: none;
+        }
+        .menu-toggle img:not([src]) {
+            display: none;
+        }
+        .menu-toggle img:not([src]) + ::after {
+            display: block;
         }
         .menu-toggle:hover {
             background-color: #163172;
@@ -122,10 +135,10 @@
         .dropdown {
             display: none;
             position: fixed;
-            top: 50px;
+            top: 40px;
             right: 0;
             width: 12.5%;
-            height: calc(100vh - 50px);
+            height: calc(100vh - 40px);
             background-color: #1e3a8a;
             border: 1px solid #1e3a8a;
             border-radius: 0;
@@ -542,9 +555,9 @@
                     <div class="footer-column">
                         <h3 class="text-lg font-semibold mb-4">Links</h3>
                         <ul class="space-y-2 text-right">
-                            <li><a href="impressum.html" class="hover:underline">Impressum</a></li>
-                            <li><a href="datenschutz.html" class="hover:underline">Datenschutz</a></li>
-                            <li><a href="agb.html" class="hover:underline">AGB</a></li>
+                            <li><a href="./impressum.html" class="hover:underline">Impressum</a></li>
+                            <li><a href="./datenschutz.html" class="hover:underline">Datenschutz</a></li>
+                            <li><a href="./agb.html" class="hover:underline">AGB</a></li>
                         </ul>
                     </div>
                     <div class="footer-column text-center">
@@ -555,7 +568,7 @@
         </footer>
 
         <!-- Book Button -->
-        <a href="https://www.airbnb.ch/rooms/46182771?guests=1&adults=1&s=67&unique_share_id=a4406f56-0aac-4b30-9efb-d0755ff40a62" class="book-button" aria-label="Direkt buchen">
+        <a href="https://www.airbnb.ch/rooms/46182771?guests=1&adults=1&s=67&unique_share_id=a4406f56-0aac-4b30-9efb-d0755ff40a62" target="_blank" rel="noopener noreferrer" class="book-button" aria-label="Direkt buchen">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
             Buchen
         </a>
