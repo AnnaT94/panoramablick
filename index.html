@@ -25,11 +25,6 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            transition: opacity 0.3s ease;
-        }
-        .logo-bar.hidden {
-            opacity: 0;
-            pointer-events: none;
         }
         .logo-bar img {
             width: 300px;
@@ -327,7 +322,7 @@
     </style>
 </head>
 <body>
-    <div class="logo-bar" id="logo-bar">
+    <div class="logo-bar">
         <img src="https://www.lav.ch/application/files/8417/5395/1772/Bild1.png" alt="Panoramablick Melchsee-Frutt Logo">
     </div>
     <div class="hero"></div>
@@ -344,8 +339,8 @@
                         </div>
                         <div class="dropdown" id="dropdown">
                             <a href="#bildergalerie">Bildergalerie</a>
-                            <a href="#prices">Preise</a>
-                            <a href="#kontakt">Anfrage</a>
+                            <a href="#prices">Preisliste</a>
+                            <a href="#kontakt">Unverbindliche Anfrage</a>
                             <a href="#gondelbahn">Gondelbahn</a>
                             <a href="#">DE | EN</a>
                         </div>
@@ -562,8 +557,6 @@
             document.addEventListener('DOMContentLoaded', function() {
                 const menuToggle = document.getElementById('menu-toggle');
                 const dropdown = document.getElementById('dropdown');
-                const logoBar = document.getElementById('logo-bar');
-                const welcomeSection = document.getElementById('wohnung');
 
                 if (menuToggle && dropdown) {
                     menuToggle.addEventListener('click', function() {
@@ -572,15 +565,6 @@
                 } else {
                     console.error('Elemente #menu-toggle oder #dropdown nicht gefunden.');
                 }
-
-                // Logo ausblenden, wenn der "Herzlich Willkommen"-Bereich erreicht wird
-                window.addEventListener('scroll', function() {
-                    if (welcomeSection && window.scrollY >= welcomeSection.offsetTop - 60) {
-                        logoBar.classList.add('hidden');
-                    } else {
-                        logoBar.classList.remove('hidden');
-                    }
-                });
 
                 document.getElementById('house-rules-btn').addEventListener('click', function() {
                     const modal = document.getElementById('house-rules-modal');
